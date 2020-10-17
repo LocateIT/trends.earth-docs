@@ -1,0 +1,622 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Changelog &mdash; LDMS 1.0.3 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="LDMS 1.0.3 documentation" href="../index.html"/>
+        <link rel="next" title="SDG Indicator 15.3.1" href="../background/understanding_indicators15.html"/>
+        <link rel="prev" title="Dataset coding" href="layers.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">About</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="general_info.html">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Data sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layers.html">Dataset coding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">0.66 (July 20, 2019)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">0.64 (July 9, 2019)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">0.62 (January 27, 2019)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">0.60 (December 3, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">0.58 (August 11, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">0.56.5 (May 21, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">0.56.4 (May 21, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">0.56.3 (April 21, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">0.56.2 (April 10, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">0.56.1 (April 10, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">0.56 (April 9, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">0.54 (April 8, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">0.52.1 (March 21, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">0.52.1 (March 21, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">0.52 (March 19, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">0.50 (March 15, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">0.48 (March 13, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id24">0.46 (March 13, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id25">0.44 (March 12, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">0.42 (February 4, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id28">0.40 (February 4, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">0.38 (January 16, 2018)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id30">0.36 (December 14, 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id32">0.34 (December 14, 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id34">0.32 (December 14, 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id35">0.30 (December 12, 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id36">0.24 (December 6, 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id37">0.22 (December 4, 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id38">0.18 (December 2, 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id39">0.16 (November 6, 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id40">0.14 (October 25, 2017)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id41">0.12 (October 6, 2017)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Background information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">SDG Indicator 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Before installing the toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installing the toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/report_overviews.html">Other resources</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Registration and settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculate indicators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Plot data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Download data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Visualization tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Load data tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step-by-step Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_installation.html">Installation and Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_run_all_subindicators.html">Run 1-step subindicators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_task_download.html">Task status &amp; download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_custom_lpd.html">Use custom productivity data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_custom_landcover.html">Use custom land cover data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_custom_soc.html">Use custom soil data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_load_basemap.html">Load results and basemap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_compute_sdg_indicator.html">Compute SDG indicator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_summary_table.html">Interpreting summary table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_forest_carbon.html">Forest and Carbon Change Tool</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Videos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/video_links.html">Video Overviews</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Changelog</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<p>This page lists the version history of <a class="reference internal" href="../_images/trends_earth_logo_bl_print.png"><img alt="Trends.Earth" src="../_images/trends_earth_logo_bl_print.png" style="width: 7em;" /></a>.</p>
+<div class="section" id="id2">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/1.0.2">1.0.2</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>First QGIS3 release - many fixes to upgrade to Qt5 and QGIS3 API.</p></li>
+<li><p>Upgrade all dependencies of plugin to latest versions as of January 2020.</p></li>
+<li><p>Fix data download tool to have default 1styles for all available
+datasets.</p></li>
+<li><p>Begin moving to QgsProcessing and QgsTask frameworks - currently only the
+carbon tool is migrated, but all tools will be migrated prior to version 1.0./</p></li>
+<li><p>Cleanup formatting of carbon tool output spreadsheet to make meaning of
+each column clearer.</p></li>
+<li><p>Update all GEE scripts to use latest version of GEE API (0.1.213).</p></li>
+<li><p>Save more settings chosen in tool dialog boxes across QGIS sessions.</p></li>
+<li><p>Clean up buffering code, to use Lambert Equal Area projections centered
+on polygon centroids for buffering.</p></li>
+<li><p>Move documentation into docs folder at root of trends.earth repository.</p></li>
+<li><p>Add more details on how to documentation on how to contribute to
+development of Trends.Earth,</p></li>
+<li><p>Clean up repository by removing compiled translations files, and adding
+these file types to .gitignore.</p></li>
+<li><p>Change transifex project name to be “trendsearth”.</p></li>
+<li><p>Various compatibility and minor bug fixes.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.66">0.66 (July 20, 2019)</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Limit maximum area for tasks to 10,000,000 sq km, except for urban area
+tasks, which is limited to 10,000 sq km.</p></li>
+<li><p>Add background section on SDG 11.3.1, and update SDG 11.3.1 tutorial.</p></li>
+<li><p>Update SDG 11.3.1 code to include 1998 in the series (internally during
+calculation) in order to filter noise from the beginning of the urban series.</p></li>
+<li><p>Fix date restrictions in SDG 15.3.1 all-in-one tool to account for both
+ESA and MODIS availability.</p></li>
+<li><p>Add section to readme on how to install Github releases.</p></li>
+<li><p>Update and review Spanish translations, update google translations for
+other languages.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.64">0.64 (July 9, 2019)</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix handling of nodata in total carbon tool.</p></li>
+<li><p>Add support for 2018 Hansen data in total carbon tool.</p></li>
+<li><p>Add support for global 30m biomass data from Wood’s Hole in total carbon</p></li>
+<li><p>Set maximum final year for one step SDG 15.3.1 tool to be 2015 (matching
+the ESA data).</p></li>
+<li><p>Make Trends.Earth productivity the default dataset in SDG one step tool
+for 15.3.1.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.62">0.62 (January 27, 2019)</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add experimental tool for mapping potential carbon returns from
+alternative restoration interventions.</p></li>
+<li><p>Add 2018 MODIS data.</p></li>
+<li><p>Miscellaneous fixes to window sizing for GUI windows.</p></li>
+<li><p>Upgrade to latest openpyxl - fixes loading of Trends.Earth logo in
+summary tables.</p></li>
+<li><p>Add publication list to help docs.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.60">0.60 (December 3, 2018)</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add calculation of change in urban area and population growth
+rate (SDG 11.3.1)</p></li>
+<li><p>Fix default button/entry field heights
+Add city selection for AOI</p></li>
+<li><p>Add optional buffering of AOI</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id7">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.58">0.58 (August 11, 2018)</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add a testing section to the calculations page</p></li>
+<li><p>Add testing version of total carbon (above and below-ground) and
+emissions due to deforestation</p></li>
+<li><p>Minor bug fixes, including for invalid polygons in input AOIs</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.5">0.56.5 (May 21, 2018)</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix error with LPD import requesting a data year.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.4">0.56.4 (May 21, 2018)</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Always resample imported data to the highest resolution.</p></li>
+<li><p>Fix custom SOC import climate zones to use an expanded climate zones
+dataset to eliminate no data.</p></li>
+<li><p>Update MOD16A2 with latest data.</p></li>
+<li><p>Force entry of date on SOC and LC data import</p></li>
+<li><p>Add global Trends.Earth outputs to download tool.</p></li>
+<li><p>Fix handling of NULL values in legends.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id11">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.3">0.56.3 (April 21, 2018)</a><a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix calculation of summary tables for AOIs that are split across the
+180th meridian (Fiji, Russia, etc.).</p></li>
+<li><p>Modify state calculation so areas with very small magnitude changes in
+NDVI integral (&lt; .01 NDVI units over full period) are considered stable.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id12">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.2">0.56.2 (April 10, 2018)</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Minor unicode fixes.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id14">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.1">0.56.1 (April 10, 2018)</a><a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix marshhmallow error on plugin load</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id15">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56">0.56 (April 9, 2018)</a><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix issue with rasterizing data (empty rasters on output)</p></li>
+<li><p>Force user to choose output resolution if rasterizing a vector</p></li>
+<li><p>Support calculation of SOC degradation from custom SOC and LC data</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id16">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.54">0.54 (April 8, 2018)</a><a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Support loading of custom LPD, SOC, and LC data.</p></li>
+<li><p>Cleanup styles so they match maps.trends.earth</p></li>
+<li><p>Upgrade pyopenxl</p></li>
+<li><p>Add import/load icons to all layer selector boxes</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id17">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.52.1">0.52.1 (March 21, 2018)</a><a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Minor bug fixes during Antalya workshop.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id19">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.52.1">0.52.1 (March 21, 2018)</a><a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Minor bug fixes during Antalya workshop.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id20">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.52">0.52 (March 19, 2018)</a><a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Clean AOI processing code.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id21">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.50">0.50 (March 15, 2018)</a><a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pass exception if only related to Trends.Earth logo addition in Excel
+file.</p></li>
+<li><p>Various minor bug fixes.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id22">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.48">0.48 (March 13, 2018)</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix table formatting</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id24">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.46">0.46 (March 13, 2018)</a><a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Support reporting table calculation with multiple geometries (Fiji, Russia)</p></li>
+<li><p>Add LPD and LC tables to UNCCD worksheet tab</p></li>
+<li><p>Clean up the warning message in the LPD import tool</p></li>
+<li><p>Fix TE final combined productivity layer loading</p></li>
+<li><p>Fix download tasks (still no styles)</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id25">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.44">0.44 (March 12, 2018)</a><a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add JRC LPD</p></li>
+<li><p>Add tool for uploading custom land cover data</p></li>
+<li><p>Add tool for uploading custom productivity data</p></li>
+<li><p>Add note that custom SOC upload is coming soon</p></li>
+<li><p>Add tool to add basemaps using Natural Earth data</p></li>
+<li><p>Add all-in-one tool for calculating all three sub-indicators at once</p></li>
+<li><p>Rename “Bare lands” class to “Other lands” for consistency with UNCCD</p></li>
+<li><p>Update docs</p></li>
+<li><p>Upgrade to marshmallow 3.0.0b7</p></li>
+<li><p>Move GEE code into the main trends.earth repository</p></li>
+<li><p>Improve handling of AOIs, particularly when shapefiles are used for input</p></li>
+<li><p>Handle multi-file outputs from GEE by tiling them in VRTs</p></li>
+<li><p>Support processing data for countries that cross the 180th meridian</p></li>
+<li><p>Improve formatting of summary table</p></li>
+<li><p>From now on, GEE script versions will be matched to the plugin version</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id26">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.42">0.42 (February 4, 2018)</a><a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix crash on change of LC aggregation (due setEnabled on removed label)</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id28">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.40">0.40 (February 4, 2018)</a><a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Remove use of mode for land cover indicator.</p></li>
+<li><p>Combine the summary table and SDG indicator map creation tools.</p></li>
+<li><p>Add stub for where JRC LPD product will be available.</p></li>
+<li><p>Save productivity sub-indicator as band 2 in SDG indicator file.</p></li>
+<li><p>Bump GEE script to v0.3.</p></li>
+<li><p>Fix error due to divide by zero on summary table generation when a class
+has zero area.</p></li>
+<li><p>Default to MODIS for productivity calculations.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id29">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.38">0.38 (January 16, 2018)</a><a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add annual soil organic carbon calculation</p></li>
+<li><p>Cleanup AOI processing code, allow multiple input polygons in shapefile
+AOIs</p></li>
+<li><p>Add shading to side of land cover aggregation table items</p></li>
+<li><p>Fix firstShow issue on aggregation table</p></li>
+<li><p>Revise summary table output to provide further information on each of the
+three indicators</p></li>
+<li><p>Add supplemental datasets to performance, state, land cover and soil
+organic carbon output.</p></li>
+<li><p>Update no data and masking values to consistently be -32768 (no data) and
+-32767 (masked data)</p></li>
+<li><p>Allow naming of file downloads</p></li>
+<li><p>Add icon to toolbar menu, fix plugin name.</p></li>
+<li><p>Refactor layer styling code to pull band info from GEE output.</p></li>
+<li><p>Add a tool to load existing trends.earth datasets into QGIS.</p></li>
+<li><p>Fix land cover date limits - don’t allow invalid dates toi be selected
+from CCI data.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id30">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.36">0.36 (December 14, 2017)</a><a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fix issue with showEvent on create map reporting tool.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id32">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.34">0.34 (December 14, 2017)</a><a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id34">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.32">0.32 (December 14, 2017)</a><a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id35">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.30">0.30 (December 12, 2017)</a><a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id36">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.24">0.24 (December 6, 2017)</a><a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id37">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.22">0.22 (December 4, 2017)</a><a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id38">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.18">0.18 (December 2, 2017)</a><a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id39">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.16">0.16 (November 6, 2017)</a><a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id40">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.14">0.14 (October 25, 2017)</a><a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id41">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.12">0.12 (October 6, 2017)</a><a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../background/understanding_indicators15.html" class="btn btn-neutral float-right" title="SDG Indicator 15.3.1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layers.html" class="btn btn-neutral" title="Dataset coding" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interpréter le tableau récapitulatif &mdash; Documentation LDMS 1.0.3</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation LDMS 1.0.3" href="../index.html"/>
+        <link rel="next" title="Outil de changement de forêt et de carbone" href="tutorial_forest_carbon.html"/>
+        <link rel="prev" title="Calculer l’indicateur SDG" href="tutorial_compute_sdg_indicator.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">À propos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/general_info.html">informations générales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/data_sources.html">Sources de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/publications.html">Des publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Questions fréquemment posées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/development.html">Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/layers.html">Codage de l'ensemble de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contexte</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">Indicateur ODD 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Avant d’installer l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installation de l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/report_overviews.html">Autres ressources</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Enregistrement et paramètres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculer les indicateurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Tracer les données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Téléchargement des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">Voir et télécharger les résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Outils de visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Charger l’outil de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">À propos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Guides étape par étape</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial_installation.html">Installation et enregistrement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_run_all_subindicators.html">Exécuter des sous-indicateurs en une étape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_task_download.html">Statut de la tâche et téléchargement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_lpd.html">Utiliser des données de productivité personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_landcover.html">Utiliser des données de couverture terrestre personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_soc.html">Utiliser des données de sol personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_load_basemap.html">Charger les résultats et le fond de carte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_compute_sdg_indicator.html">Calculer l’indicateur SDG</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interpréter le tableau récapitulatif</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_forest_carbon.html">Outil de changement de forêt et de carbone</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Vidéos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="video_links.html">Présentation des vidéos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Interpréter le tableau récapitulatif</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interpreting-summary-table">
+<span id="tut-interpret-table"></span><h1>Interpréter le tableau récapitulatif<a class="headerlink" href="#interpreting-summary-table" title="Lien permanent vers ce titre">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Objectif</strong>: Apprenez à ouvrir et à interpréter les tableaux récapitulatifs produits par Trends.Earth lors du calcul de la couche finale SDG 15.3.1.</p></li>
+<li><p><strong>Temps d’achèvement estimé</strong>: 25 minutes</p></li>
+<li><p><strong>Accès Internet</strong>: Non requis</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="../pdfs/Trends.Earth_Tutorial08_The_Summary_Table.pdf">Télécharger cette page en format PDF pour une utilisation hors connexion</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Vous aurez besoin d’avoir précédemment calculé SDG 15.3.1 en utilisant l’outil <strong>Calculer la couche finale SDG 15.3.1 et la table récapitulative pour la limite totale</strong>. Reportez-vous à la section <a class="reference internal" href="tutorial_compute_sdg_indicator.html#tut-compute-sdg"><span class="std std-ref">Calculer l’indicateur SDG</span></a> pour des instructions sur la façon d’exécuter l’analyse.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Lorsque vous avez calculé SDG 15.3.1, un fichier Excel a été créé avec la table récapitulative. Accédez à ce dossier et double-cliquez sur le fichier pour l’ouvrir.</p></li>
+</ol>
+<img alt="../_images/sdg_find_table.png" class="align-center" src="../_images/sdg_find_table.png" />
+<p>Si vous utilisez Microsoft Excel, les messages d’erreur suivants peuvent s’afficher. Cliquez sur <strong>Oui</strong> sur le premier et sur <strong>OK</strong> sur le second. Nous travaillons actuellement en essayant d’identifier d’où vient l’erreur, mais le fichier est entièrement fonctionnel.</p>
+<p>Si vous utilisez LibreOffice ou OpenOffice, le fichier se chargera sans erreur.</p>
+<img alt="../_images/sdg_table_error1.png" class="align-center" src="../_images/sdg_table_error1.png" />
+<img alt="../_images/sdg_table_error2.png" class="align-center" src="../_images/sdg_table_error2.png" />
+<ol class="arabic simple" start="2">
+<li><p>Le fichier du tableau récapitulatif contient 5 onglets, que vous pouvez explorer en cliquant sur chacun des différents noms au bas de l’écran: ODD 15.3.1, Productivité, Carbone organique du sol, Couverture terrestre et Rapport UNCCD.</p></li>
+<li><p>Dans l’onglet <strong>SDG 15.3.1</strong>, vous trouverez les calculs de surface dérivés de la carte des indicateurs que vous avez explorée dans QGIS.</p></li>
+</ol>
+<blockquote>
+<div><p>Pour la zone où vous effectuez l’analyse, vous verrez la superficie totale (à l’exclusion des masses d’eau): terres qui ont connu une amélioration, qui sont restées stables, zones dégradées, ainsi que les informations sur les zones sans données pour la période sélectionnée. Aucune donnée dans l’ODD 15.3.1 n’est une indication de l’absence de données dans certains ensembles de données d’entrée utilisés dans l’analyse.</p>
+</div></blockquote>
+<img alt="../_images/table_sdg.png" class="align-center" src="../_images/table_sdg.png" />
+<ol class="arabic simple" start="3">
+<li><p>Dans l’onglet <strong>Productivité</strong>, vous trouverez en haut un résumé similaire à celui expliqué précédemment, mais dans ce cas, il représente uniquement les résultats du sous-indicateur de la productivité des terres.</p></li>
+</ol>
+<blockquote>
+<div><p>Dans les sections ci-dessous, vous trouverez deux tableaux, chacun contenant des informations sur la superficie (en kilomètres carrés) pour chacune des transitions de couverture terrestre trouvées dans l’étude pendant la période analysée par chacune des 5 classes finales de productivité: Augmentation, Stable , Stable mais stressé, signes précoces de déclin, et déclin.</p>
+</div></blockquote>
+<img alt="../_images/table_productivity.png" class="align-center" src="../_images/table_productivity.png" />
+<ol class="arabic simple" start="4">
+<li><p>Dans l’onglet <strong>Carbone organique du sol</strong>, vous trouverez en haut, un résumé similaire à celui expliqué précédemment, mais dans ce cas représentant les résultats du sous-indicateur carbone organique du sol seul.</p></li>
+</ol>
+<blockquote>
+<div><p>Dans les sections ci-dessous, vous trouverez deux tableaux:</p>
+<ul class="simple">
+<li><p>Le premier contient des informations sur les changements dans les stocks de carbone de la base (première année d’analyse) à la cible (dernière année d’analyse).</p></li>
+<li><p>La seconde présente l’évolution du carbone organique du sol entre le niveau de référence et la cible par type de transition de la couverture terrestre (en pourcentage du stock initial).</p></li>
+</ul>
+</div></blockquote>
+<img alt="../_images/table_soc.png" class="align-center" src="../_images/table_soc.png" />
+<ol class="arabic simple" start="5">
+<li><p>Dans l’onglet <strong>Land cover</strong>, vous trouverez en haut un résumé similaire à celui expliqué précédemment, mais dans ce cas, il représente uniquement les résultats du sous-indicateur de changement de la couverture terrestre.</p></li>
+</ol>
+<blockquote>
+<div><p>Dans les sections ci-dessous, vous trouverez deux tableaux:</p>
+<ul class="simple">
+<li><p>Le premier contient des informations sur le changement de la couverture du sol par classe de couverture (sq, km et%).</p></li>
+<li><p>La seconde contient des informations sur la superficie des terres par type de transition de la couverture terrestre (km2).</p></li>
+</ul>
+</div></blockquote>
+<img alt="../_images/table_landcover.png" class="align-center" src="../_images/table_landcover.png" />
+<ol class="arabic simple" start="6">
+<li><p>Dans l’onglet <strong>UNCCD Reporting</strong>, vous trouverez cinq tableaux contenant des informations similaires à celles présentées dans les onglets précédents, mais dans ce cas spécifiquement formatés pour correspondre au modèle de rapport requis par la UNCCD. Chaque tableau indique en haut le numéro de page et la section du modèle auquel l’information se réfère.</p></li>
+</ol>
+<img alt="../_images/table_unccd.png" class="align-center" src="../_images/table_unccd.png" />
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial_forest_carbon.html" class="btn btn-neutral float-right" title="Outil de changement de forêt et de carbone" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial_compute_sdg_indicator.html" class="btn btn-neutral" title="Calculer l’indicateur SDG" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

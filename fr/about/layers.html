@@ -1,0 +1,1058 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Codage de l&#39;ensemble de données &mdash; Documentation LDMS 1.0.3</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation LDMS 1.0.3" href="../index.html"/>
+        <link rel="next" title="Indicateur ODD 15.3.1" href="../background/understanding_indicators15.html"/>
+        <link rel="prev" title="Développement" href="development.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">À propos</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="general_info.html">informations générales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Sources de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Des publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Questions fréquemment posées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Développement</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Codage de l'ensemble de données</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sdg-15-3-1-indicator">Indicateur ODD 15.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#productivity">Productivité</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-trajectory-trend">Trajectoire de productivité (tendance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-trajectory-significance">Trajectoire de productivité (importance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-performance-degradation">Rendement de la productivité (dégradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-performance-ratio">Performances de productivité (ratio)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-performance-units">Performances de productivité (unités)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-state-degradation">État de productivité (dégradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-state-classes">Classes d'état de productivité</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-state-ndvi-mean">État de productivité NDVI moyen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sdg-15-3-1-productivity-indicator">Indicateur de productivité ODD 15.3.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#land-productivity-dynamics">Dynamique de productivité des terres</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#land-cover">Couverture terrestre</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover-degradation">Couverture terrestre (dégradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover-7-class">Couverture terrestre (7 classes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover-esa-classes">Couverture terrestre (classes ESA)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover-transitions">Couverture terrestre (transitions)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#soil-organic-carbon">Carbone organique du sol</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#soil-organic-carbon-degradation">Carbone organique du sol (dégradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Carbone organique du sol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#population">Population</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delta-normalized-burnt-ratio">Delta Normalized Burnt Ratio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Contexte</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">Indicateur ODD 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Avant d’installer l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installation de l’outil</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Enregistrement et paramètres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculer les indicateurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Tracer les données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Téléchargement des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">Voir et télécharger les résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Outils de visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Charger l’outil de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">À propos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Codage de l'ensemble de données</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dataset-coding">
+<h1>Codage de l'ensemble de données<a class="headerlink" href="#dataset-coding" title="Lien permanent vers ce titre">¶</a></h1>
+<p>The spatial data produced by LDMS is in GeoTiff format. This is a
+widely supported format, so theese datasets can be used within QGIS as well as
+within any other GIS software.</p>
+<p>If you wish to use LDMS data outside of the tool itself, you will need to
+know how the data is coded. The tables below provide guidance on what the exact
+layers are that are produced by each analysis in LDMS.</p>
+<p>To see which of the below layers is contained within a LDMS output
+file, use the <a class="reference external" href="../documentation/load_data.html">load data</a> tool. When you
+choose a file with that toool, it will show you a list of the layers within
+that file, as well as the band number for each layer.</p>
+<div class="section" id="sdg-15-3-1-indicator">
+<h2>Indicateur ODD 15.3.1<a class="headerlink" href="#sdg-15-3-1-indicator" title="Lien permanent vers ce titre">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>Dégradation</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Pas de changement</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Amélioration</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="productivity">
+<h2>Productivité<a class="headerlink" href="#productivity" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="productivity-trajectory-trend">
+<h3>Trajectoire de productivité (tendance)<a class="headerlink" href="#productivity-trajectory-trend" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toute autre valeur</p></td>
+<td><p>Tendance linéaire du NDVI intégré chaque année, mise à l'échelle de 10 000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="productivity-trajectory-significance">
+<h3>Trajectoire de productivité (importance)<a class="headerlink" href="#productivity-trajectory-significance" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3</p></td>
+<td><p>Déclin significatif (p&amp;gt; .99)</p></td>
+</tr>
+<tr class="row-even"><td><p>-2</p></td>
+<td><p>Déclin significatif (p&amp;gt; .95)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>Déclin significatif (p&amp;gt; .90)</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Pas de changement significatif</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Augmentation significative (p&amp;gt; .90)</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Augmentation significative (p&amp;gt; .95)</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Augmentation significative (p&amp;gt; .99)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="productivity-performance-degradation">
+<h3>Rendement de la productivité (dégradation)<a class="headerlink" href="#productivity-performance-degradation" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>Dégradation</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Pas de changement</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="productivity-performance-ratio">
+<h3>Performances de productivité (ratio)<a class="headerlink" href="#productivity-performance-ratio" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 92%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>Rapport du NDVI moyen et de la productivité maximale. Voir le contexte sur <cite>performance &amp;lt;../ background / Understanding_indicators15.html # productivité-performance&amp;gt;</cite> _.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="productivity-performance-units">
+<h3>Performances de productivité (unités)<a class="headerlink" href="#productivity-performance-units" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toute autre valeur</p></td>
+<td><p>Numéro d'identification de l'unité utilisée pour calculer les performances. Voir le contexte sur <cite>performance &amp;lt;../ background / Understanding_indicators15.html # productivité-performance&amp;gt;</cite> _.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="productivity-state-degradation">
+<h3>État de productivité (dégradation)<a class="headerlink" href="#productivity-state-degradation" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toute autre valeur</p></td>
+<td><p>Changement des classes d'état de productivité entre la référence et la période cible, calculé comme le classement dans la période cible moins le classement dans la période de référence. Les valeurs positives indiquent une amélioration, les valeurs négatives indiquent une baisse.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="productivity-state-classes">
+<h3>Classes d'état de productivité<a class="headerlink" href="#productivity-state-classes" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toute autre valeur</p></td>
+<td><p>Classe de centile pour l'état de productivité. Voir le contexte sur <cite>état de productivité &amp;lt;../ background / Understanding_indicators15.html # productivité-état&amp;gt;</cite> _.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="productivity-state-ndvi-mean">
+<h3>État de productivité NDVI moyen<a class="headerlink" href="#productivity-state-ndvi-mean" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toute autre valeur</p></td>
+<td><p>NDVI annuel moyen intégré pour la période de référence choisie pour l'état de productivité, à l'échelle de 10 000. Voir le contexte sur <cite>état de productivité &amp;lt;../ background / Understanding_indicators15.html # productivité-état&amp;gt;</cite> _.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sdg-15-3-1-productivity-indicator">
+<h3>Indicateur de productivité ODD 15.3.1<a class="headerlink" href="#sdg-15-3-1-productivity-indicator" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>En déclin</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Premiers signes de déclin</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Stable mais sous stress</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Stable</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>En augmentation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="land-productivity-dynamics">
+<h3>Dynamique de productivité des terres<a class="headerlink" href="#land-productivity-dynamics" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>En déclin</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Déclin modéré</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Sous stress</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Stable</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>En augmentation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="land-cover">
+<h2>Couverture terrestre<a class="headerlink" href="#land-cover" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="land-cover-degradation">
+<h3>Couverture terrestre (dégradation)<a class="headerlink" href="#land-cover-degradation" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>Dégradation</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Pas de changement</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Amélioration</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="land-cover-7-class">
+<h3>Couverture terrestre (7 classes)<a class="headerlink" href="#land-cover-7-class" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Couvert d'arbres</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Prairies</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Terres cultivées</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Zone humide</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Artificiel</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Autres terres</p></td>
+</tr>
+<tr class="row-odd"><td><p>sept</p></td>
+<td><p>Étendue d’eau</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="land-cover-esa-classes">
+<h3>Couverture terrestre (classes ESA)<a class="headerlink" href="#land-cover-esa-classes" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 91%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>dix</p></td>
+<td><p>Terres cultivées, pluviales</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Couverture herbacée</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Couverture d'arbre ou d'arbuste</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>Terres cultivées, irriguées ou post-inondation</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>Terres cultivées en mosaïque (&amp;gt; 50%) / végétation naturelle (arbre, arbuste, couverture herbacée) (&amp;lt;50%)</p></td>
+</tr>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>Végétation naturelle en mosaïque (arbre, arbuste, couverture herbacée) (&amp;gt; 50%) / terres cultivées (&amp;lt;50%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>50</p></td>
+<td><p>Couverture arborescente, feuillue, sempervirente, fermée à ouverte (&amp;gt; 15%)</p></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>Couverture arborescente, feuillue, à feuilles caduques, fermée à ouverte (&amp;gt; 15%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>61</p></td>
+<td><p>Couverture arborée, feuillue, caduque, fermée (&amp;gt; 40%)</p></td>
+</tr>
+<tr class="row-even"><td><p>62</p></td>
+<td><p>Couverture arborescente, feuillue, à feuilles caduques, ouverte (15 à 40%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>70</p></td>
+<td><p>Couverture arborescente, feuilletée, à feuilles persistantes, fermée à ouverte (&amp;gt; 15%)</p></td>
+</tr>
+<tr class="row-even"><td><p>71</p></td>
+<td><p>Couverture arborescente, feuilletée, persistante, fermée (&amp;gt; 40%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>72</p></td>
+<td><p>Couverture arborescente, feuilletée, persistante, ouverte (15 à 40%)</p></td>
+</tr>
+<tr class="row-even"><td><p>80</p></td>
+<td><p>Couverture arborescente, feuillue, à feuilles caduques, fermée à ouverte (&amp;gt; 15%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>81</p></td>
+<td><p>Couverture arborescente, feuillue, à feuilles caduques, fermée (&amp;gt; 40%)</p></td>
+</tr>
+<tr class="row-even"><td><p>82</p></td>
+<td><p>Couverture arborescente, feuillue, à feuilles caduques, ouverte (15‐40%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>90</p></td>
+<td><p>Couverture arborescente, à feuilles mixtes (feuillues et feuilletées)</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>Mosaïque et arbuste (&amp;gt; 50%) / couverture herbacée (&amp;lt;50%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>110</p></td>
+<td><p>Couverture herbacée en mosaïque (&amp;gt; 50%) / arbre et arbuste (&amp;lt;50%)</p></td>
+</tr>
+<tr class="row-even"><td><p>120</p></td>
+<td><p>Shrubland</p></td>
+</tr>
+<tr class="row-odd"><td><p>121</p></td>
+<td><p>Arbuste à feuilles persistantes</p></td>
+</tr>
+<tr class="row-even"><td><p>122</p></td>
+<td><p>Arbuste à feuilles caduques</p></td>
+</tr>
+<tr class="row-odd"><td><p>130</p></td>
+<td><p>Prairie</p></td>
+</tr>
+<tr class="row-even"><td><p>140</p></td>
+<td><p>Lichens et mousses</p></td>
+</tr>
+<tr class="row-odd"><td><p>150</p></td>
+<td><p>Végétation clairsemée (arbre, arbuste, couverture herbacée) (&amp;lt;15%)</p></td>
+</tr>
+<tr class="row-even"><td><p>151</p></td>
+<td><p>Arbre clairsemé (&amp;lt;15%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>152</p></td>
+<td><p>Arbuste clairsemé (&amp;lt;15%)</p></td>
+</tr>
+<tr class="row-even"><td><p>153</p></td>
+<td><p>Couverture herbacée clairsemée (&amp;lt;15%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>160</p></td>
+<td><p>Couverture arborée, inondée, eau douce ou eau de frein</p></td>
+</tr>
+<tr class="row-even"><td><p>170</p></td>
+<td><p>Couverture arborée, inondée, eau saline</p></td>
+</tr>
+<tr class="row-odd"><td><p>180</p></td>
+<td><p>Couverture arbustive ou herbacée, inondée, eau douce / saline / brakish</p></td>
+</tr>
+<tr class="row-even"><td><p>190</p></td>
+<td><p>Zones urbaines</p></td>
+</tr>
+<tr class="row-odd"><td><p>200</p></td>
+<td><p>Zones nues</p></td>
+</tr>
+<tr class="row-even"><td><p>201</p></td>
+<td><p>Zones nues consolidées</p></td>
+</tr>
+<tr class="row-odd"><td><p>202</p></td>
+<td><p>Zones nues non consolidées</p></td>
+</tr>
+<tr class="row-even"><td><p>210</p></td>
+<td><p>Plans d'eau</p></td>
+</tr>
+<tr class="row-odd"><td><p>220</p></td>
+<td><p>Neige et glace permanentes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="land-cover-transitions">
+<h3>Couverture terrestre (transitions)<a class="headerlink" href="#land-cover-transitions" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Recouvert d'arbres - Recouvert d'arbres (aucun changement)</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Prairie - Prairie (pas de changement)</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Cropland - Cropland (pas de changement)</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Zone humide - Zone humide (aucun changement)</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Artificiel - Artificiel (aucun changement)</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Autres terres - Autres terres (aucun changement)</p></td>
+</tr>
+<tr class="row-odd"><td><p>sept</p></td>
+<td><p>Plan d'eau - Plan d'eau (pas de changement)</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>Forêt - Prairie</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>Forêt - Terres cultivées</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>Forêt - Zone humide</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>Forêt - artificielle</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>Forêt - Autres terres</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>Forêt - Plan d'eau</p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p>Prairie - Forêt</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>Prairies - Terres cultivées</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>Prairie - Zone humide</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>Prairie - artificielle</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>Prairies - Autres terres</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>Prairie - Plan d'eau</p></td>
+</tr>
+<tr class="row-even"><td><p>31</p></td>
+<td><p>Terres cultivées - Forêt</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>Terres cultivées - prairies</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>Terre cultivée - Zone humide</p></td>
+</tr>
+<tr class="row-odd"><td><p>35</p></td>
+<td><p>Terres cultivées - artificielles</p></td>
+</tr>
+<tr class="row-even"><td><p>36</p></td>
+<td><p>Terres cultivées - Autres terres</p></td>
+</tr>
+<tr class="row-odd"><td><p>37</p></td>
+<td><p>Cropland - Plan d'eau</p></td>
+</tr>
+<tr class="row-even"><td><p>41</p></td>
+<td><p>Zone humide - Forêt</p></td>
+</tr>
+<tr class="row-odd"><td><p>42</p></td>
+<td><p>Zone humide - prairie</p></td>
+</tr>
+<tr class="row-even"><td><p>43</p></td>
+<td><p>Zone humide - Terres cultivées</p></td>
+</tr>
+<tr class="row-odd"><td><p>45</p></td>
+<td><p>Zone humide - artificielle</p></td>
+</tr>
+<tr class="row-even"><td><p>46</p></td>
+<td><p>Zone humide - Autres terres</p></td>
+</tr>
+<tr class="row-odd"><td><p>47</p></td>
+<td><p>Zone humide - Plan d'eau</p></td>
+</tr>
+<tr class="row-even"><td><p>51</p></td>
+<td><p>Artificiel - Forêt</p></td>
+</tr>
+<tr class="row-odd"><td><p>52</p></td>
+<td><p>Artificiel - Prairie</p></td>
+</tr>
+<tr class="row-even"><td><p>53</p></td>
+<td><p>Artificiel - Terres cultivées</p></td>
+</tr>
+<tr class="row-odd"><td><p>54</p></td>
+<td><p>Artificiel - Zone humide</p></td>
+</tr>
+<tr class="row-even"><td><p>56</p></td>
+<td><p>Artificiel - Autres terres</p></td>
+</tr>
+<tr class="row-odd"><td><p>57</p></td>
+<td><p>Artificiel - Plan d'eau</p></td>
+</tr>
+<tr class="row-even"><td><p>61</p></td>
+<td><p>Autres terrains - Forêt</p></td>
+</tr>
+<tr class="row-odd"><td><p>62</p></td>
+<td><p>Autres terres - Prairies</p></td>
+</tr>
+<tr class="row-even"><td><p>63</p></td>
+<td><p>Autres terres - Terres cultivées</p></td>
+</tr>
+<tr class="row-odd"><td><p>64</p></td>
+<td><p>Autres terres - Zone humide</p></td>
+</tr>
+<tr class="row-even"><td><p>65</p></td>
+<td><p>Autres terres - artificielles</p></td>
+</tr>
+<tr class="row-odd"><td><p>67</p></td>
+<td><p>Autre terrain - Plan d'eau</p></td>
+</tr>
+<tr class="row-even"><td><p>71</p></td>
+<td><p>Plan d'eau - Forêt</p></td>
+</tr>
+<tr class="row-odd"><td><p>72</p></td>
+<td><p>Plan d'eau - Prairie</p></td>
+</tr>
+<tr class="row-even"><td><p>73</p></td>
+<td><p>Plan d'eau - Cropland</p></td>
+</tr>
+<tr class="row-odd"><td><p>74</p></td>
+<td><p>Plan d'eau - Zone humide</p></td>
+</tr>
+<tr class="row-even"><td><p>75</p></td>
+<td><p>Plan d'eau - Artificiel</p></td>
+</tr>
+<tr class="row-odd"><td><p>76</p></td>
+<td><p>Plan d'eau - Autre terrain</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="soil-organic-carbon">
+<h2>Carbone organique du sol<a class="headerlink" href="#soil-organic-carbon" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="soil-organic-carbon-degradation">
+<h3>Carbone organique du sol (dégradation)<a class="headerlink" href="#soil-organic-carbon-degradation" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toute autre valeur</p></td>
+<td><p>Variation en pourcentage de la teneur en carbone organique du sol (0 - 30 cm de profondeur) de la référence à l'année cible. Les valeurs positives indiquent une augmentation, les valeurs négatives indiquent une diminution.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h3>Carbone organique du sol<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toute autre valeur</p></td>
+<td><p>Teneur en carbone organique du sol (0 - 30 cm de profondeur) en tonnes métriques par hectare</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="population">
+<h3>Population<a class="headerlink" href="#population" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toute autre valeur</p></td>
+<td><p>Population totale dans la cellule de la grille</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="delta-normalized-burnt-ratio">
+<h3>Delta Normalized Burnt Ratio<a class="headerlink" href="#delta-normalized-burnt-ratio" title="Lien permanent vers ce titre">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Valeur</p></th>
+<th class="head"><p>Sens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-500</p></td>
+<td><p>Aucune donnée</p></td>
+</tr>
+<tr class="row-odd"><td><p>-350</p></td>
+<td><p>Hight Severety</p></td>
+</tr>
+<tr class="row-even"><td><p>-300</p></td>
+<td><p>Moderate High Severety</p></td>
+</tr>
+<tr class="row-odd"><td><p>-200</p></td>
+<td><p>Moderate Low Severety</p></td>
+</tr>
+<tr class="row-even"><td><p>-100</p></td>
+<td><p>Low Severety</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>Unburned</p></td>
+</tr>
+<tr class="row-even"><td><p>300</p></td>
+<td><p>Enhanced Growth Low</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Enhanced Growth High</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../background/understanding_indicators15.html" class="btn btn-neutral float-right" title="Indicateur ODD 15.3.1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="development.html" class="btn btn-neutral" title="Développement" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

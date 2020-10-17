@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Charger l’outil de données &mdash; Documentation LDMS 1.0.3</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation LDMS 1.0.3" href="../index.html"/>
+        <link rel="next" title="À propos" href="info.html"/>
+        <link rel="prev" title="Outils de visualisation" href="reporting_tool.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">À propos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/general_info.html">informations générales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/data_sources.html">Sources de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/publications.html">Des publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Questions fréquemment posées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/development.html">Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/layers.html">Codage de l'ensemble de données</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contexte</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">Indicateur ODD 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Avant d’installer l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installation de l’outil</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Enregistrement et paramètres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculate.html">Calculer les indicateurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot_data.html">Tracer les données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_download.html">Téléchargement des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">Voir et télécharger les résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reporting_tool.html">Outils de visualisation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Charger l’outil de données</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#load-a-dataset-produced-by-ldms">Load a dataset produced by LDMS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#productivity">Productivité</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover">Couverture terrestre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#soil-organic-carbon">Carbone organique du sol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sdg-15-3-1-indicator">Indicateur ODD 15.3.1</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#load-a-custom-input-dataset">Charger une série personnalisée de données d’entrée</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Productivité</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Couverture terrestre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Carbone organique du sol</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="info.html">À propos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Charger l’outil de données</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="load-data-tool">
+<h1>Charger l’outil de données<a class="headerlink" href="#load-data-tool" title="Lien permanent vers ce titre">¶</a></h1>
+<img alt="../_images/ldmt_toolbar_highlight_loaddata.png" class="align-center" src="../_images/ldmt_toolbar_highlight_loaddata.png" />
+<p>The « Load data » function allows the user to load data into QGIS and
+LDMS for analysis.</p>
+<p>There are two options, to load results of LDMS analysis or to load
+custom datasets which will be used to compute the indicators.</p>
+<img alt="../_images/loaddata_menu.png" class="align-center" src="../_images/loaddata_menu.png" />
+<div class="section" id="load-a-dataset-produced-by-ldms">
+<h2>Load a dataset produced by LDMS<a class="headerlink" href="#load-a-dataset-produced-by-ldms" title="Lien permanent vers ce titre">¶</a></h2>
+<p>This option lets you load already downloaded results from LDMS.</p>
+<div class="section" id="productivity">
+<h3>Productivité<a class="headerlink" href="#productivity" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Utilisez cette fonction pour charger dans la carte QGIS des indicateurs de productivité pré-calculés qui ont été traités pour identifier la dégradation des terres.</p>
+<p>Accédez au dossier dans lequel vous avez enregistré le fichier téléchargé et sélectionnez-le. Le fichier téléchargé est un raster à 8 bandes, chaque bande représentant les trois sous-indicateurs (trajectoire, performance et état) ainsi que d’autres informations pouvant vous aider à interpréter les tendances identifiées. Les couches à charger dans les cartes QGIS sont celles qui sont surlignées en gris. Par défaut: trajectoire (dégradation et pente), performance et état. Si vous souhaitez charger les autres couches, sélectionnez-les et cliquez sur OK.</p>
+<img alt="../_images/loaddata_trendsearth_productivity.png" class="align-center" src="../_images/loaddata_trendsearth_productivity.png" />
+<p>Les couches seront chargées dans la carte QGIS avec sa symbologie correspondante.</p>
+<img alt="../_images/loaddata_trendsearth_productivity_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_productivity_loaded.png" />
+</div>
+<div class="section" id="land-cover">
+<h3>Couverture terrestre<a class="headerlink" href="#land-cover" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette option vous permet de charger des indicateurs de couverture du sol précalculés qui ont été traités pour identifier la dégradation des terres.</p>
+<p>Accédez au dossier dans lequel vous avez enregistré le fichier téléchargé et sélectionnez-le. Le fichier téléchargé est un raster multi-bandes. Le nombre de bandes dépendra de la période d’analyse sélectionnée et de la source de données utilisée. Si la couverture terrestre par défaut de l’ESA CCI était utilisée, par exemple, les cartes annuelles de la couverture terrestre seront téléchargées.</p>
+<p>Les bandes dans la pile représentent: la couverture terrestre initiale et finale (annuelle si disponible) à la fois dans le système de classification original et en utilisant le tableau de couverture terrestre des 7 classes de la CNULCD, les transitions de couverture terrestre et la dégradation du couvert terrestre identifiées par ce sous-indicateur. Si vous souhaitez charger les autres couches non sélectionnées par défaut, sélectionnez-les et cliquez sur OK.</p>
+<img alt="../_images/loaddata_trendsearth_landcover.png" class="align-center" src="../_images/loaddata_trendsearth_landcover.png" />
+<p>Les couches seront chargées dans la carte QGIS avec sa symbologie correspondante.</p>
+<img alt="../_images/loaddata_trendsearth_landcover_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_landcover_loaded.png" />
+</div>
+<div class="section" id="soil-organic-carbon">
+<h3>Carbone organique du sol<a class="headerlink" href="#soil-organic-carbon" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette option vous permet de charger des indicateurs de carbone organique du sol précalculés qui ont été traités pour identifier la dégradation des terres.</p>
+<p>Accédez au dossier dans lequel vous avez enregistré le fichier téléchargé et sélectionnez-le. Le fichier téléchargé est un raster multi-bandes. Le nombre de bandes dépendra de la période d’analyse sélectionnée et de la source de données utilisée. Si la couverture terrestre par défaut de l’ESA CCI était utilisée, par exemple, des cartes annuelles de carbone organique du sol seront téléchargées.</p>
+<p>Les bandes de la pile représentent: les stocks initial et final de carbone organique du sol (données annuelles sur le COS et les terres si disponibles), les cartes de couverture terrestre initiale et finale utilisant la classification de la couverture terrestre des 7 classes de la CNULCD et la dégradation identifiée par ce sous-indicateur. Les unités de la couche de dégradation sont des «% de changement». Si les changements sont supérieurs à 10% pour la période, ils seront considérés comme une amélioration ou une dégradation selon le signe du changement. Si vous souhaitez charger les autres couches non sélectionnées par défaut, sélectionnez-les et cliquez sur OK.</p>
+<img alt="../_images/loaddata_trendsearth_soc.png" class="align-center" src="../_images/loaddata_trendsearth_soc.png" />
+<p>Les couches seront chargées dans la carte QGIS avec sa symbologie correspondante.</p>
+<img alt="../_images/loaddata_trendsearth_soc_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_soc_loaded.png" />
+</div>
+<div class="section" id="sdg-15-3-1-indicator">
+<h3>Indicateur ODD 15.3.1<a class="headerlink" href="#sdg-15-3-1-indicator" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette option vous permet de charger un sous-indicateur de productivité pré-calculé (intégration de la trajectoire, de la performance et de l’état) ainsi que l’ODD final 15.3.1 (intégration de la productivité, de la couverture terrestre et du carbone organique du sol)</p>
+<p>Accédez au dossier dans lequel vous avez enregistré le fichier téléchargé et sélectionnez-le. Le fichier téléchargé est un raster à 2 bandes, le premier contenant des informations sur l’ODD et le second sur le sous-indicateur de productivité pour 5 classes.</p>
+<img alt="../_images/loaddata_trendsearth_sdg.png" class="align-center" src="../_images/loaddata_trendsearth_sdg.png" />
+<p>Les couches seront chargées dans la carte QGIS avec sa symbologie correspondante.</p>
+<img alt="../_images/loaddata_trendsearth_sdg_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_sdg_loaded.png" />
+</div>
+</div>
+<div class="section" id="load-a-custom-input-dataset">
+<h2>Charger une série personnalisée de données d’entrée<a class="headerlink" href="#load-a-custom-input-dataset" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id1">
+<h3>Productivité<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Use this option to load productivity datasets which have already been generated outside of LDMS.</p>
+<p>Les classes de productivité dans les données d’entrée doivent être codées comme suit:</p>
+<p>1: En déclin 2: Premiers signes de déclin 3: Stable mais sous stress 4: Stable 5: En hausse 0 ou -32768: Aucune donnée</p>
+<img alt="../_images/loaddata_landproductivity.png" class="align-center" src="../_images/loaddata_landproductivity.png" />
+</div>
+<div class="section" id="id2">
+<h3>Couverture terrestre<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Utilisez cette option pour charger des jeux de données de couverture terrestre qui seront ensuite utilisés pour l’analyse du changement de la couverture terrestre et / ou l’analyse du changement de carbone organique du sol.</p>
+<img alt="../_images/loaddata_landcover.png" class="align-center" src="../_images/loaddata_landcover.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si vous utilisez les <a class="reference external" href="https://www.eea.europa.eu/publications/COR0-landcover">données sur la couverture terrestre CORINE</a>,  vous pouvez utiliser ce fichier de définition &lt;<a class="reference external" href="https://s3.amazonaws.com/trends.earth/sharing/Corine_Land_Cover_to_UNCCD_TrendsEarth_Definition.json">https://s3.amazonaws.com/trends.earth/sharing/Corine_Land_Cover_to_UNCCD_TrendsEarth_Definition.json</a>&gt;`_ pour pré-charger une agrégation suggérée des classes de couverture terrestre dans CORINE afin de les convertir aux 7 classes de couverture terrestre de la CNULCD.</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Carbone organique du sol<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le traitement des données personnalisées de carbone organique du sol peut être géré à l'aide de cet outil.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tool assumes that the units of the raster layer to be imported
+are <strong>Metrics Tons of organic carbon per hectare</strong>. If your layer is in
+different units, please make the necessary conversions before using it in
+LDMS.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="info.html" class="btn btn-neutral float-right" title="À propos" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="reporting_tool.html" class="btn btn-neutral" title="Outils de visualisation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

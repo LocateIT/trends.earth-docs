@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Use custom soil data &mdash; LDMS 1.0.3 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="LDMS 1.0.3 documentation" href="../index.html"/>
+        <link rel="next" title="Load results and basemap" href="tutorial_load_basemap.html"/>
+        <link rel="prev" title="Use custom land cover data" href="tutorial_custom_landcover.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/general_info.html">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/data_sources.html">Data sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/layers.html">Dataset coding</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Background information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">SDG Indicator 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Before installing the toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installing the toolbox</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Registration and settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculate indicators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Plot data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Download data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Visualization tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Load data tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step-by-step Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial_installation.html">Installation and Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_run_all_subindicators.html">Run 1-step subindicators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_task_download.html">Task status &amp; download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_lpd.html">Use custom productivity data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_landcover.html">Use custom land cover data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Use custom soil data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loading-custom-soil-organic-carbon-data">Loading custom soil organic carbon data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculating-soil-organic-carbon-with-custom-data">Calculating soil organic carbon with custom data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_load_basemap.html">Load results and basemap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_compute_sdg_indicator.html">Compute SDG indicator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_summary_table.html">Interpreting summary table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_forest_carbon.html">Forest and Carbon Change Tool</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Use custom soil data</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="use-custom-soil-data">
+<span id="tut-custom-soc"></span><h1>Use custom soil data<a class="headerlink" href="#use-custom-soil-data" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Objective</strong>: Learn how to load custom soil organic carbon data to compute the carbon change sub-indicator using Trends.Earth.</p></li>
+<li><p><strong>Estimated time of completion</strong>: 20 minutes</p></li>
+<li><p><strong>Internet access</strong>: Not required</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="../pdfs/Trends.Earth_Tutorial06_Using_Custom_Soil_Carbon.pdf">Download this page as a PDF for offline use</a></p>
+</div>
+<div class="section" id="loading-custom-soil-organic-carbon-data">
+<span id="load-custom-soc"></span><h2>Loading custom soil organic carbon data<a class="headerlink" href="#loading-custom-soil-organic-carbon-data" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tool assumes that the units of the raster layer to be imported are <strong>Metrics Tons of organic carbon per hectare</strong>. If your layer is in different units, please make the necessary conversions before using it in Trends.Earth.</p>
+</div>
+<ol class="arabic simple">
+<li><p>To load soil organic carbon data click on the (<a class="reference internal" href="../_images/icon-folder.png"><img alt="iconFolder" src="../_images/icon-folder.png" style="width: 2em;" /></a>) icon in the Trends.Earth toolbar.</p></li>
+</ol>
+<img alt="../_images/ldmt_toolbar_highlight_loaddata.png" class="align-center" src="../_images/ldmt_toolbar_highlight_loaddata.png" />
+<ol class="arabic simple" start="2">
+<li><p>The <strong>Load data</strong> menu will open. Select <strong>Soil organic carbon</strong> from the <strong>Import a custom input dataset</strong> section.</p></li>
+</ol>
+<img alt="../_images/custom_soc.png" class="align-center" src="../_images/custom_soc.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the <strong>Load a Custom Soil Organic Carbon (SOC) dataset</strong> use the radio
+button to select the format of the input file (raster or vector). For this
+tutorial select raster, since the data distributed by the UNCCD is in raster
+format. Click on <strong>Browse</strong> to navigate to the soil organic carbon file you
+wish to import.</p></li>
+</ol>
+<img alt="../_images/custom_soc_menu1.png" class="align-center" src="../_images/custom_soc_menu1.png" />
+<ol class="arabic simple" start="4">
+<li><p>Use the <strong>Select input file</strong> window to navigate to the file to be imported, select it, and click <strong>Open</strong>.</p></li>
+</ol>
+<img alt="../_images/soc_input.png" class="align-center" src="../_images/soc_input.png" />
+<ol class="arabic simple" start="5">
+<li><p>Back at the <strong>Load a Custom Soil Organic Carbon (SOC) dataset</strong> window you have options for selecting the band number in which the productivity data is stored, in case your input file is a multi band raster. You also have the option of modifying the resolution of the file. We recommend leaving those as defaults unless you have valid reasons for changing them.</p></li>
+<li><p>Define the year of reference for the data. In this case, we will assume the soil organic carbon data is from 2000, but if using local data, make sure you are assigning the correct year.</p></li>
+<li><p>Click <strong>Browse</strong> at the bottom of the window to select the <strong>Output raster file</strong>.</p></li>
+</ol>
+<img alt="../_images/custom_soc_menu2.png" class="align-center" src="../_images/custom_soc_menu2.png" />
+<ol class="arabic simple" start="8">
+<li><p>Navigate to the folder where you want to save the file. Assign it a name and click <strong>Save</strong>.</p></li>
+</ol>
+<img alt="../_images/soc_output.png" class="align-center" src="../_images/soc_output.png" />
+<ol class="arabic simple" start="9">
+<li><p>Back at the <strong>Load a Custom Soil Organic Carbon (SOC) dataset</strong> click <strong>OK</strong> for the tool to run.</p></li>
+</ol>
+<img alt="../_images/custom_soc_menu2.png" class="align-center" src="../_images/custom_soc_menu2.png" />
+<ol class="arabic simple" start="10">
+<li><p>A progress bar will appear showing the percentage of the task completed.</p></li>
+</ol>
+<img alt="../_images/running.png" class="align-center" src="../_images/running.png" />
+<ol class="arabic simple" start="11">
+<li><p>When the processing is completed, the imported soil organic carbon dataset will be loaded to QGIS.</p></li>
+</ol>
+<img alt="../_images/soc_output_map.png" class="align-center" src="../_images/soc_output_map.png" />
+</div>
+<div class="section" id="calculating-soil-organic-carbon-with-custom-data">
+<h2>Calculating soil organic carbon with custom data<a class="headerlink" href="#calculating-soil-organic-carbon-with-custom-data" title="Permalink to this headline">¶</a></h2>
+<p>Once you have imported a custom soil organic carbon dataset, it is possible to
+calculate soil organic carbon degradation from that data. To do so, first
+ensure the custom soil organic carbon data is loaded within QGIS (see
+<a class="reference internal" href="#load-custom-soc"><span class="std std-ref">Loading custom soil organic carbon data</span></a>).</p>
+<ol class="arabic simple">
+<li><p>To calculate soil organic carbon degradation from custom data, first click
+on the (<a class="reference internal" href="../_images/icon-calculator.png"><img alt="iconCalculator" src="../_images/icon-calculator.png" style="width: 2em;" /></a>) icon on the Trends.Earth toolbar:</p></li>
+</ol>
+<img alt="../_images/ldmt_toolbar_highlight_calculate.png" class="align-center" src="../_images/ldmt_toolbar_highlight_calculate.png" />
+<ol class="arabic simple" start="2">
+<li><p>The “Calculate indicators” menu will open. Select “Soil organic carbon”
+from the “Option 2: Use customized data” section.</p></li>
+</ol>
+<img alt="../_images/custom_soc_calculate.png" class="align-center" src="../_images/custom_soc_calculate.png" />
+<ol class="arabic simple" start="3">
+<li><p>The “Calculate Soil Organic Carbon” window will open. Click the radio button
+next to “Custom land cover dataset” and select either “Import” to import a
+custom land cover dataset, or “Load existing” to load a land cover dataset
+you have already processed in Trends.Earth. Be sure to select both an
+“Initial layer” and a “Final layer”. See the <a class="reference internal" href="tutorial_custom_landcover.html#tut-custom-lc"><span class="std std-ref">Use custom land cover data</span></a> tutorial
+for more information on loading land cover datasets. Once you have selected
+both datasets, click next:</p></li>
+</ol>
+<img alt="../_images/calc_soc_select_lc.png" class="align-center" src="../_images/calc_soc_select_lc.png" />
+<ol class="arabic simple" start="4">
+<li><p>On the next screen, click the check box next to “Custom initial soil organic
+carbon dataset”, and then use the “Import” or “Load existing” buttons to
+either import custom soil carbon layer (<a class="reference internal" href="#load-custom-soc"><span class="std std-ref">Loading custom soil organic carbon data</span></a>) or to load
+an existing one that has already been calculated:</p></li>
+</ol>
+<img alt="../_images/calc_soc_choose_soc_data.png" class="align-center" src="../_images/calc_soc_choose_soc_data.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click “Next”. Now, choose the area you wish to run calculations for:</p></li>
+</ol>
+<img alt="../_images/calc_soc_choose_area.png" class="align-center" src="../_images/calc_soc_choose_area.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click “Next”. on the last screen, enter a task name or any notes you might
+wish to save (this is optional) and then click “Calculate”:</p></li>
+</ol>
+<img alt="../_images/calc_soc_final_page.png" class="align-center" src="../_images/calc_soc_final_page.png" />
+<ol class="arabic simple" start="7">
+<li><p>A progress bar will appear on your screen. Do not quit QGIS or turn off your
+computer until the calculation is complete.</p></li>
+</ol>
+<img alt="../_images/calc_soc_calculating.png" class="align-center" src="../_images/calc_soc_calculating.png" />
+<ol class="arabic simple" start="8">
+<li><p>Once the calculation is complete, three layers will load onto your map: 1)
+the final soil organic carbon layer, 2) the initial soil organic carbon
+layer, and 3) the soil organic carbon degradation layer:</p></li>
+</ol>
+<img alt="../_images/calc_soc_done.png" class="align-center" src="../_images/calc_soc_done.png" />
+<ol class="arabic simple" start="9">
+<li><p>For example, we can see areas of degradation in soil carbon around Kampala:</p></li>
+</ol>
+<img alt="../_images/calc_soc_deg_map.png" class="align-center" src="../_images/calc_soc_deg_map.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <a class="reference internal" href="tutorial_compute_sdg_indicator.html#tut-compute-sdg"><span class="std std-ref">Compute SDG indicator</span></a> tutorial for instructions on how to use
+the imported soil organic carbon data to compute the final SDG 15.3.1 after
+integration with land cover and land productivity.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial_load_basemap.html" class="btn btn-neutral float-right" title="Load results and basemap" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial_custom_landcover.html" class="btn btn-neutral" title="Use custom land cover data" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

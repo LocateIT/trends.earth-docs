@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Use custom land cover data &mdash; LDMS 1.0.3 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="LDMS 1.0.3 documentation" href="../index.html"/>
+        <link rel="next" title="Use custom soil data" href="tutorial_custom_soc.html"/>
+        <link rel="prev" title="Use custom productivity data" href="tutorial_custom_lpd.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/general_info.html">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/data_sources.html">Data sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/layers.html">Dataset coding</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Background information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">SDG Indicator 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Before installing the toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installing the toolbox</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Registration and settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculate indicators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Plot data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Download data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Visualization tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Load data tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Step-by-step Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial_installation.html">Installation and Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_run_all_subindicators.html">Run 1-step subindicators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_task_download.html">Task status &amp; download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_lpd.html">Use custom productivity data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Use custom land cover data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_soc.html">Use custom soil data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_load_basemap.html">Load results and basemap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_compute_sdg_indicator.html">Compute SDG indicator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_summary_table.html">Interpreting summary table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_forest_carbon.html">Forest and Carbon Change Tool</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Use custom land cover data</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="use-custom-land-cover-data">
+<span id="tut-custom-lc"></span><h1>Use custom land cover data<a class="headerlink" href="#use-custom-land-cover-data" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Objective</strong>: Learn how to load custom land cover data and to compute the land cover change sub-indicator using Trends.Earth.</p></li>
+<li><p><strong>Estimated time of completion</strong>: 40 minutes</p></li>
+<li><p><strong>Internet access</strong>: Not required</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="../pdfs/Trends.Earth_Tutorial05_Using_Custom_Land_Cover.pdf">Download this page as a PDF for offline use</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The land cover dataset for this tutorial were provided by the
+<a class="reference external" href="http://geoportal.rcmrd.org/layers/servir%3Auganda_landcover_2014_scheme_i">Regional Centre For Mapping Resource For Development</a>
+and can be downloaded from this <a class="reference external" href="https://s3.amazonaws.com/trends.earth/sharing/RCMRD_Uganda_Land_Cover.zip">link</a>.</p>
+</div>
+<ol class="arabic simple">
+<li><p>To load custom land cover data click on the (<a class="reference internal" href="../_images/icon-folder.png"><img alt="iconFolder" src="../_images/icon-folder.png" style="width: 2em;" /></a>) icon in the Trends.Earth toolbar.</p></li>
+</ol>
+<img alt="../_images/ldmt_toolbar_highlight_loaddata.png" class="align-center" src="../_images/ldmt_toolbar_highlight_loaddata.png" />
+<ol class="arabic simple" start="2">
+<li><p>The <strong>Load data</strong> menu will open. Select <strong>Land cover</strong> from the <strong>Import a custom input dataset</strong> section.</p></li>
+</ol>
+<img alt="../_images/custom_landcover.png" class="align-center" src="../_images/custom_landcover.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the <strong>Load a Custom Land Cover dataset</strong> use the radio button to select the format of the input file (raster or vector). For this tutorial select raster, but you could run it with your land cover vector data if you prefer. Click on <strong>Browse</strong> to navigate to the land cover file you wish to import.</p></li>
+</ol>
+<img alt="../_images/custom_landcover_menu1.png" class="align-center" src="../_images/custom_landcover_menu1.png" />
+<ol class="arabic simple" start="4">
+<li><p>Use the <strong>Select input file</strong> window to navigate to the file to be imported, select it, and click <strong>Open</strong>.</p></li>
+</ol>
+<img alt="../_images/input.png" class="align-center" src="../_images/input.png" />
+<ol class="arabic simple" start="5">
+<li><p>Back at the <strong>Load a Custom Land Cover dataset</strong> window you have options for selecting the band number in which the productivity data is stored, in case your input file is a multi band raster. You also have the option of modifying the resolution of the file. We recommend leaving those as defaults unless you have valid reasons for changing them.</p></li>
+<li><p>Define the year of reference for the data. In this case, since the land cover dataset for Uganda was developed for the <strong>year 2000</strong>, define it as such. Make sure you are assigning the correct year.</p></li>
+<li><p>Click <strong>Browse</strong> at the bottom of the window to select the <strong>Output raster file</strong>.</p></li>
+</ol>
+<img alt="../_images/custom_landcover_menu2.png" class="align-center" src="../_images/custom_landcover_menu2.png" />
+<ol class="arabic simple" start="8">
+<li><p>Click on the <strong>Edit definition</strong> button, this will open the <strong>Setup aggregation of land cover data menu</strong>. Here you need to assign each of the original input values of your dataset to one of the 7 UNCCD recommended land cover classes.</p></li>
+</ol>
+<img alt="../_images/definition1.png" class="align-center" src="../_images/definition1.png" />
+<p>For this example, the Uganda dataset has 18 land cover classes:</p>
+<img alt="../_images/uganda_legend.png" class="align-center" src="../_images/uganda_legend.png" />
+<dl class="simple">
+<dt>From the Metadata of the land cover dataset, we know that the best aggregation approach is the following:</dt><dd><ul class="simple">
+<li><p>No data = 0</p></li>
+<li><p>Tree covered = 1 through 7</p></li>
+<li><p>Grassland = 8 through 11</p></li>
+<li><p>Cropland = 12 through 14</p></li>
+<li><p>Wetland = 15</p></li>
+<li><p>Water body = 16</p></li>
+<li><p>Artificial = 17</p></li>
+<li><p>Other land = 18</p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="9">
+<li><p>Use the <strong>Setup aggregation of land cover data menu</strong> to assign to each number in the <strong>Input class</strong> its corresponding <strong>Output class</strong>.</p></li>
+</ol>
+<blockquote>
+<div><p>When you are done editing, click <strong>Save definition file</strong>. This option will save you time next time you run the tool, by simply loading the definition file you previously saved.</p>
+<p>Click <strong>Save</strong> to continue</p>
+</div></blockquote>
+<img alt="../_images/definition2.png" class="align-center" src="../_images/definition2.png" />
+<ol class="arabic simple" start="7">
+<li><p>Back at the <strong>Load a Custom Land Cover dataset</strong> window, click <strong>Browse</strong> at the bottom of the window to select the <strong>Output raster file</strong>.</p></li>
+</ol>
+<img alt="../_images/custom_landcover_menu2.png" class="align-center" src="../_images/custom_landcover_menu2.png" />
+<ol class="arabic simple" start="8">
+<li><p>Navigate to the folder where you want to save the file. Assign it a name and click <strong>Save</strong>.</p></li>
+</ol>
+<img alt="../_images/output.png" class="align-center" src="../_images/output.png" />
+<ol class="arabic simple" start="9">
+<li><p>Back at the <strong>Load a Custom Land Cover dataset</strong> click <strong>OK</strong> for the tool to run.</p></li>
+</ol>
+<img alt="../_images/custom_landcover_menu3.png" class="align-center" src="../_images/custom_landcover_menu3.png" />
+<ol class="arabic simple" start="10">
+<li><p>A progress bar will appear showing the percentage of the task completed.</p></li>
+</ol>
+<img alt="../_images/running.png" class="align-center" src="../_images/running.png" />
+<ol class="arabic simple" start="11">
+<li><p>When the processing is completed, the imported land cover dataset will be loaded to QGIS.</p></li>
+</ol>
+<img alt="../_images/lc_loaded.png" class="align-center" src="../_images/lc_loaded.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You have one imported custom land cover data for one year (2000), but two are needed to perform the land cover change analysis. Repeat now steps 1 through 11, but this time with the most recent land cover map. For this tutorial, we will use another land cover map from Uganda from the year 2015. <strong>Make sure to change the year date in the import menu</strong>.</p>
+</div>
+<ol class="arabic simple" start="12">
+<li><p>Once you have imported the land cover maps for years 2000 and 2015, you should have them both loaded to QGIS.</p></li>
+</ol>
+<img alt="../_images/both_lc_loaded.png" class="align-center" src="../_images/both_lc_loaded.png" />
+<ol class="arabic simple" start="13">
+<li><p>Now that both land cover datasets have been imported into Trends.Earth, the land cover change analysis tool needs to be run. Search for the Trends.Earth toolbar within QGIS, and click on the Calculate icon (<a class="reference internal" href="../_images/icon-calculator.png"><img alt="iconCalculator" src="../_images/icon-calculator.png" style="width: 2em;" /></a>).</p></li>
+</ol>
+<img alt="../_images/ldmt_toolbar_highlight_calculate.png" class="align-center" src="../_images/ldmt_toolbar_highlight_calculate.png" />
+<ol class="arabic simple" start="14">
+<li><p>The <strong>Calculate Indicators</strong> menu will open. In that window, click on <strong>Land cover</strong> button found under Step 1 - Option 2.</p></li>
+</ol>
+<img alt="../_images/call_lc_change_tool.png" class="align-center" src="../_images/call_lc_change_tool.png" />
+<ol class="arabic simple" start="15">
+<li><p>The <strong>Calculate Land Cover Change</strong> window will open. In the <strong>Setup</strong> tab, click on <strong>Custom land cover dataset</strong>. Use the drop down option next to <strong>Initial layer (initial year)</strong> and <strong>Final layer (target year)</strong> to change the dates accordingly. When done, click <strong>Next</strong>.</p></li>
+</ol>
+<img alt="../_images/lc_change_tool.png" class="align-center" src="../_images/lc_change_tool.png" />
+<ol class="arabic simple" start="16">
+<li><p>The <strong>Define Degradation</strong> tab is where you define the meaning of each land cover transition in terms of degradation. Transitions indicated in red (minus sign) will be identified as degradation in the final output, transitions in beige (zero) will be identified as stable, and transitions in green (plus sign) will be identified as improvements.</p></li>
+</ol>
+<blockquote>
+<div><p>For example, by default it is considered that a pixel that changed from <strong>Grassland</strong> to <strong>Tree-covered</strong> will be considered as improved. However, if in your study area woody plant encroachment is a degradation process, that transition should be changed for that particular study area to degradation (minus sign).</p>
+<p>If you have made no changes to the default matrix, simply click <strong>Next</strong>.</p>
+<p>If you did change the meaning of some of the transitions, click on <strong>Save table to file…</strong> to save the definition for later use. Then click <strong>Next</strong>.</p>
+</div></blockquote>
+<img alt="../_images/lc_degradation_matrix.png" class="align-center" src="../_images/lc_degradation_matrix.png" />
+<ol class="arabic simple" start="17">
+<li><p>In the <strong>Area</strong> tab define the area of analysis. There are two options:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Use provided country and state boundaries: If you want to use this option make sure the <strong>Administrative area</strong> option is highlighted, and then select the First Level (country) or Second Level (state or province depending on the country).</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference external" href="http://www.naturalearthdata.com">Natural Earth Administrative Boundaries</a> provided in Trends.Earth
+are in the <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">public domain</a>. The boundaries and names used, and the
+designations used, in Trends.Earth do not imply official endorsement or
+acceptance by Conservation International Foundation, or by its partner
+organizations and contributors.</p>
+<p>If using Trends.Earth for official purposes, it is recommended that users
+choose an official boundary provided by the designated office of their
+country.</p>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>Use your own area file: If you want to use your own area of analysis, make sure the <strong>Area from file</strong> option is highlighted. Then click <strong>Browse</strong> and navigate to the folder in your computer where you have the file stored.</p></li>
+</ul>
+<p>When you have selected the area for which you want to compute the indicators, click <strong>Next</strong>.</p>
+</div></blockquote>
+<img alt="../_images/area_uganda.png" class="align-center" src="../_images/area_uganda.png" />
+<ol class="arabic simple" start="18">
+<li><p>In the <strong>Options</strong> tab you can define the <strong>Task name</strong> and make some <strong>Notes</strong> to identify the analysis you are running. What information to indicate is optional, but we suggest noting:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Area of analysis</p></li>
+<li><p>Dates</p></li>
+<li><p>Indicators run</p></li>
+</ul>
+</div></blockquote>
+<img alt="../_images/option_uganda_lc_degradation.png" class="align-center" src="../_images/option_uganda_lc_degradation.png" />
+<ol class="arabic simple" start="19">
+<li><p>When you click <strong>Calculate</strong>, the <strong>Choose a name for the output file</strong> will open. Select where to save the file and its name, and click <strong>Save</strong>.</p></li>
+</ol>
+<img alt="../_images/output_lc_degradation.png" class="align-center" src="../_images/output_lc_degradation.png" />
+<ol class="arabic simple" start="20">
+<li><p>A progress bar will appear showing the percentage of the task completed.</p></li>
+</ol>
+<img alt="../_images/running_lc_degradation.png" class="align-center" src="../_images/running_lc_degradation.png" />
+<ol class="arabic simple" start="21">
+<li><p>When the processing is completed, the imported land cover degradation sub-indicator dataset will be loaded to QGIS.</p></li>
+</ol>
+<img alt="../_images/loaded_lc_degradation.png" class="align-center" src="../_images/loaded_lc_degradation.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <a class="reference internal" href="tutorial_compute_sdg_indicator.html#tut-compute-sdg"><span class="std std-ref">Compute SDG indicator</span></a> tutorial for instructions on how to use the land cover sub-indicator to compute the final SDG 15.3.1 after integration with changes land productivity and soil organic carbon.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial_custom_soc.html" class="btn btn-neutral float-right" title="Use custom soil data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial_custom_lpd.html" class="btn btn-neutral" title="Use custom productivity data" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exécuter des sous-indicateurs en une étape &mdash; Documentation LDMS 1.0.3</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation LDMS 1.0.3" href="../index.html"/>
+        <link rel="next" title="Statut de la tâche et téléchargement" href="tutorial_task_download.html"/>
+        <link rel="prev" title="Installation et enregistrement" href="tutorial_installation.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">À propos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/general_info.html">informations générales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/data_sources.html">Sources de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/publications.html">Des publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Questions fréquemment posées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/development.html">Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/layers.html">Codage de l'ensemble de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contexte</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">Indicateur ODD 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Avant d’installer l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installation de l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/report_overviews.html">Autres ressources</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Enregistrement et paramètres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculer les indicateurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Tracer les données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Téléchargement des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">Voir et télécharger les résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Outils de visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Charger l’outil de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">À propos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Guides étape par étape</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial_installation.html">Installation et enregistrement</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exécuter des sous-indicateurs en une étape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_task_download.html">Statut de la tâche et téléchargement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_lpd.html">Utiliser des données de productivité personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_landcover.html">Utiliser des données de couverture terrestre personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_soc.html">Utiliser des données de sol personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_load_basemap.html">Charger les résultats et le fond de carte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_compute_sdg_indicator.html">Calculer l’indicateur SDG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_summary_table.html">Interpréter le tableau récapitulatif</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_forest_carbon.html">Outil de changement de forêt et de carbone</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Vidéos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="video_links.html">Présentation des vidéos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Exécuter des sous-indicateurs en une étape</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="run-1-step-subindicators">
+<span id="step-subindicators"></span><h1>Exécuter des sous-indicateurs en une étape<a class="headerlink" href="#run-1-step-subindicators" title="Lien permanent vers ce titre">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Objectif</strong>: Apprenez comment exécuter les sous-indicateurs SDG 15.3.1 (changements dans la productivité des terres, la couverture terrestre et le carbone organique du sol) en utilisant Trends.Earth et les données par défaut: LPD du CCR pour la productivité des terres, ESA CCI pour les terres couverture, et SoilGrids pour le carbone organique du sol. Dans ce tutoriel, nous utiliserons l’Ouganda comme exemple, mais vous pouvez choisir n’importe quelle zone d’étude.</p></li>
+<li><p>** Temps d'exécution estimé <a href="#id1"><span class="problematic" id="id2">**</span></a>: 35 minutes</p></li>
+<li><p><strong>Accès Internet</strong>: Obligatoire</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="../pdfs/Trends.Earth_Tutorial02_Computing_Indicators.pdf">Télécharger cette page en format PDF pour une utilisation hors ligne</a></p>
+</div>
+<ol class="arabic simple">
+<li><p>Recherchez la barre d’outils Trends.Earth dans QGIS, puis cliquez sur l’icône Calculer (<a class="reference internal" href="../_images/icon-calculator.png"><img alt="iconCalculator" src="../_images/icon-calculator.png" style="width: 2em;" /></a>).</p></li>
+</ol>
+<img alt="../_images/ldmt_toolbar_highlight_calculate.png" class="align-center" src="../_images/ldmt_toolbar_highlight_calculate.png" />
+<ol class="arabic simple" start="2">
+<li><p>Le menu ** Calculer indicateurs ** s'ouvre. Dans cette fenêtre, cliquez sur Indicateur de dégradation des terres (indicateur SDG 15.3.1).</p></li>
+</ol>
+<img alt="../_images/LDindicator.png" class="align-center" src="../_images/LDindicator.png" />
+<p>Sélectionnez ** Calculez les trois sous-indicateurs en une seule étape ** bouton situé sous Étape 1 - Option 1.</p>
+<img alt="../_images/run.png" class="align-center" src="../_images/run.png" />
+<ol class="arabic simple" start="3">
+<li><p>Dans l’onglet <strong>Configuration</strong>, sélectionnez les années d’analyse (2000-2015) et assurez-vous que les données par défaut <strong>UNCCD</strong> sont sélectionnées, puis cliquez sur Suivant.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reportez-vous à la section: ref: <cite>indicator-15-3-1</cite> de ce manuel pour en savoir plus sur les indicateurs de productivité Trends.Earth développés à la suite du <a class="reference external" href="http://www2.unccd.int/sites/default/files/related-links/2017-10/Best%20Practice%20Guidance_SDG%20Indicator%2015.3.1_Version%201.0.pdf">Guide de bonnes pratiques de la CCD (UNGD)</a>.</p>
+</div>
+<img alt="../_images/run_setup.png" class="align-center" src="../_images/run_setup.png" />
+<ol class="arabic simple" start="4">
+<li><p>Dans l’onglet <strong>Land Cover Setup</strong> vous pouvez utiliser la méthode d’agrégation par défaut proposée par les données par défaut de la UNCCD ou vous pouvez personnaliser l’agrégation de la légende des classes de couverture terrestre originale de l’ESA CCI aux 7 requises pour les rapports UNCCD . Pour le personnaliser, cliquez sur <strong>Modifier la définition</strong> et la fenêtre <strong>Agréger l’installation des données de couverture terrestre</strong> s’ouvrira.</p></li>
+</ol>
+<img alt="../_images/run_landcover.png" class="align-center" src="../_images/run_landcover.png" />
+<ol class="arabic simple" start="5">
+<li><p>Dans cette fenêtre, vous verrez la classe de couverture terrestre originale ESA CCI dans la colonne <strong>Input class</strong> et l’agrégation finale dans la colonne <strong>Output class</strong>. Pour modifier la classe de sortie, cliquez simplement sur la flèche déroulante à côté de la couleur et sélectionnez la classe de sortie finale à laquelle vous souhaitez réaffecter la classe d’entrée. Notez que cette étape n’est nécessaire que si vous considérez que le schéma d’agrégation par défaut ne représente pas les conditions de votre zone d’étude.</p></li>
+</ol>
+<blockquote>
+<div><p>Lorsque vous avez terminé, cliquez sur <strong>Enregistrer le fichier de définition</strong>. Cette option vous fera gagner du temps la prochaine fois que vous lancerez l’outil, en chargeant simplement le fichier de définition précédemment enregistré.</p>
+<p>Cliquez sur <strong>Enregistrer</strong> pour continuer</p>
+</div></blockquote>
+<img alt="../_images/run_landcover_aggr.png" class="align-center" src="../_images/run_landcover_aggr.png" />
+<ol class="arabic simple" start="6">
+<li><p>Vous reviendrez à l’onglet <strong>Land Cover Setup</strong>, cliquez sur <strong>Next</strong>.</p></li>
+</ol>
+<img alt="../_images/run_landcover.png" class="align-center" src="../_images/run_landcover.png" />
+<ol class="arabic simple" start="7">
+<li><p>L’onglet <strong>Définir les effets de la couverture des terres</strong> est l’endroit où vous définissez la signification de chaque transition de couverture terrestre en termes de dégradation. Les transitions indiquées en rouge (signe moins) seront identifiées comme dégradation dans la sortie finale, les transitions en beige (zéro) seront identifiées comme stables et les transitions en vert (signe plus) seront identifiées comme des améliorations.</p></li>
+</ol>
+<blockquote>
+<div><p>Par exemple, par défaut, on considère qu’un pixel qui a changé de <strong>Prairie</strong> à <strong>Arbre couvert</strong> sera considéré comme amélioré. Cependant, si dans votre zone d’étude l’empiètement des plantes ligneuses est un processus de dégradation, cette transition devrait être changée pour cette zone d’étude particulière en dégradation (signe moins).</p>
+<p>Si vous n’avez apporté aucune modification à la matrice par défaut, cliquez simplement sur <strong>Suivant</strong>.</p>
+<p>Si vous avez modifié la signification de certaines transitions, cliquez sur <strong>Enregistrer la table dans le fichier…</strong> pour enregistrer la définition pour une utilisation ultérieure. Puis cliquez sur <strong>Suivant</strong>.</p>
+</div></blockquote>
+<img alt="../_images/run_landcover_degr.png" class="align-center" src="../_images/run_landcover_degr.png" />
+<ol class="arabic simple" start="8">
+<li><p>Dans l’onglet <strong>Zone</strong>, définissez la zone d’analyse. Il y a deux options:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Utiliser les limites de pays et d’état fournies: Si vous souhaitez utiliser cette option, assurez-vous que l’option <strong>Zone administrative</strong> est sélectionnée, puis sélectionnez Premier niveau (pays) ou Deuxième niveau (état ou province selon le pays).</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les <a class="reference external" href="http://www.naturalearthdata.com">Natural Earth Administrative Boundaries</a> fournies dans Trends.Earth sont dans le <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">public domain</a>. Les limites et les noms utilisés, ainsi que les désignations utilisées, dans Trends.Earth n’impliquent pas l’approbation officielle ou l’acceptation par Conservation International Foundation, ou par ses organisations partenaires et contributeurs.</p>
+<p>Si vous utilisez Trends.Earth à des fins officielles, il est recommandé de choisir une frontière officielle fournie par le bureau désigné de votre pays.</p>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>Utilisez votre propre fichier de zone: Si vous souhaitez utiliser votre propre zone d’analyse, assurez-vous que l’option <strong>Area from file</strong> est en surbrillance. Cliquez ensuite sur <strong>Parcourir</strong> et naviguez jusqu’au dossier de votre ordinateur où vous avez stocké le fichier.</p></li>
+</ul>
+<p>Lorsque vous avez sélectionné la zone pour laquelle vous souhaitez calculer les indicateurs, cliquez sur <strong>Suivant</strong>.</p>
+</div></blockquote>
+<img alt="../_images/run_area.png" class="align-center" src="../_images/run_area.png" />
+<ol class="arabic simple" start="9">
+<li><p>Dans l’onglet <strong>Options</strong>, vous pouvez définir le <strong>nom de la tâche</strong> et créer <strong>Notes</strong> pour identifier l’analyse que vous exécutez. Quelle information à indiquer est facultative, mais nous suggérons de noter:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Domaine d’analyse</p></li>
+<li><p>Rendez-vous</p></li>
+<li><p>Les indicateurs fonctionnent</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="10">
+<li><p>Lorsque vous avez terminé, cliquez sur <strong>Calculer</strong> et la tâche sera envoyée à Google Earth Engine pour les calculs. Vous remarquerez que la fenêtre <strong>Calculer l’indicateur SDG 15.3.1 (une étape)</strong> disparaîtra et vous serez redirigé vers QGIS.</p></li>
+</ol>
+<img alt="../_images/run_options.png" class="align-center" src="../_images/run_options.png" />
+<ol class="arabic simple" start="11">
+<li><p>Une barre bleue claire s’affiche temporairement, indiquant que la tâche a été envoyée avec succès. L’analyse sera effectuée sur les serveurs de Google et pourrait prendre entre 5 et 15 minutes selon la taille de la zone d’étude (les zones plus grandes ont tendance à prendre plus de temps).</p></li>
+</ol>
+<img alt="../_images/submitted.png" class="align-center" src="../_images/submitted.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reportez-vous au tutoriel <a class="reference internal" href="tutorial_task_download.html#task-download"><span class="std std-ref">Statut de la tâche et téléchargement</span></a> pour obtenir des instructions sur la façon de vérifier l’état des tâches soumises et de télécharger les résultats de Trends.Earth.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial_task_download.html" class="btn btn-neutral float-right" title="Statut de la tâche et téléchargement" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial_installation.html" class="btn btn-neutral" title="Installation et enregistrement" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

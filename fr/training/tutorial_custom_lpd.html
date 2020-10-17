@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Utiliser des données de productivité personnalisées &mdash; Documentation LDMS 1.0.3</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation LDMS 1.0.3" href="../index.html"/>
+        <link rel="next" title="Utiliser des données de couverture terrestre personnalisées" href="tutorial_custom_landcover.html"/>
+        <link rel="prev" title="Statut de la tâche et téléchargement" href="tutorial_task_download.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">À propos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/general_info.html">informations générales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/data_sources.html">Sources de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/publications.html">Des publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Questions fréquemment posées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/development.html">Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/layers.html">Codage de l'ensemble de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contexte</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">Indicateur ODD 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Avant d’installer l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installation de l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/report_overviews.html">Autres ressources</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Enregistrement et paramètres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculer les indicateurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Tracer les données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Téléchargement des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">Voir et télécharger les résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Outils de visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Charger l’outil de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">À propos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Guides étape par étape</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial_installation.html">Installation et enregistrement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_run_all_subindicators.html">Exécuter des sous-indicateurs en une étape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_task_download.html">Statut de la tâche et téléchargement</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utiliser des données de productivité personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_landcover.html">Utiliser des données de couverture terrestre personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_soc.html">Utiliser des données de sol personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_load_basemap.html">Charger les résultats et le fond de carte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_compute_sdg_indicator.html">Calculer l’indicateur SDG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_summary_table.html">Interpréter le tableau récapitulatif</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_forest_carbon.html">Outil de changement de forêt et de carbone</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Vidéos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="video_links.html">Présentation des vidéos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Utiliser des données de productivité personnalisées</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="use-custom-productivity-data">
+<span id="tut-custom-lpd"></span><h1>Utiliser des données de productivité personnalisées<a class="headerlink" href="#use-custom-productivity-data" title="Lien permanent vers ce titre">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Objectif</strong>: Apprenez à charger des données de productivité terrestre personnalisées calculées en dehors de Trends.Earth.</p></li>
+<li><p><strong>Temps estimé d’achèvement</strong>: 20 minutes</p></li>
+<li><p><strong>Accès Internet</strong>: Non requis</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="../pdfs/Trends.Earth_Tutorial04_Using_Custom_Productivity.pdf">Télécharger cette page en format PDF pour une utilisation hors connexion</a></p>
+</div>
+<p>Les données sur la productivité des terres doivent être formatées selon les directives de la CNULD pour les rapports indiquant les zones de déclin, les premiers signes de déclin, la productivité primaire stable mais stressée, stable ou en augmentation.</p>
+<dl>
+<dt>Pour les données de productivité à utiliser dans Trends.Earth, le fichier doit être codé de la façon suivante:</dt><dd><ul class="simple">
+<li><p>En déclin = 1</p></li>
+<li><p>Les premiers signes de déclin = 2</p></li>
+<li><p>Stable mais stressé = 3</p></li>
+<li><p>Stable = 4</p></li>
+<li><p>Augmentation = 5</p></li>
+<li><p>Aucune donnée = 0 ou -32768</p></li>
+</ul>
+<p>Si votre couche n’est pas codée de cette manière, veuillez faire les ajustements nécessaires avant d’utiliser Trends.Earth.</p>
+</dd>
+</dl>
+<ol class="arabic simple">
+<li><p>Pour charger les données de productivité, cliquez sur l’icône (<a class="reference internal" href="../_images/icon-folder.png"><img alt="iconFolder" src="../_images/icon-folder.png" style="width: 2em;" /></a>) dans la barre d’outils de Trends.Earth.</p></li>
+</ol>
+<img alt="../_images/ldmt_toolbar_highlight_loaddata.png" class="align-center" src="../_images/ldmt_toolbar_highlight_loaddata.png" />
+<ol class="arabic simple" start="2">
+<li><p>Le menu <strong>Charger les données</strong> s’ouvre. Sélectionnez <strong>Productivité</strong> dans la section <strong>Importer un ensemble de données d’entrée personnalisé</strong>.</p></li>
+</ol>
+<img alt="../_images/call_custom_lpd_menu.png" class="align-center" src="../_images/call_custom_lpd_menu.png" />
+<ol class="arabic simple" start="3">
+<li><p>Dans le <strong>Charger un ensemble de données de productivité terrain personnalisé</strong>, utilisez le bouton radio pour sélectionner le format du fichier d’entrée (raster ou vecteur). Pour ce didacticiel, sélectionnez raster, car les données distribuées par UNCCD sont au format raster. Cliquez sur <strong>Parcourir</strong> pour accéder au fichier de productivité que vous souhaitez importer.</p></li>
+</ol>
+<img alt="../_images/custom_lpd_menu1.png" class="align-center" src="../_images/custom_lpd_menu1.png" />
+<ol class="arabic simple" start="4">
+<li><p>Utilisez la fenêtre <strong>Select input file</strong> pour accéder au fichier à importer, sélectionnez-le et cliquez sur <strong>Open</strong>.</p></li>
+</ol>
+<img alt="../_images/custom_lpd_load_input.png" class="align-center" src="../_images/custom_lpd_load_input.png" />
+<ol class="arabic simple" start="5">
+<li><p>De retour à la fenêtre <strong>Charger un ensemble de données de productivité terrain personnalisé</strong>, vous avez des options pour sélectionner le numéro de bande dans lequel les données de productivité sont stockées, dans le cas où votre fichier d’entrée est un raster multi-bande. Vous avez également la possibilité de modifier la résolution du fichier. Nous vous recommandons de les laisser comme paramètres par défaut, sauf si vous avez des raisons valables de les changer.</p></li>
+<li><p>Cliquez sur <strong>Parcourir</strong> en bas de la fenêtre pour sélectionner <strong>Fichier raster en sortie</strong> et naviguez jusqu’au dossier dans lequel vous souhaitez enregistrer le fichier. Attribuez-lui un nom et cliquez sur <strong>OK</strong>.</p></li>
+</ol>
+<img alt="../_images/custom_lpd_menu2.png" class="align-center" src="../_images/custom_lpd_menu2.png" />
+<ol class="arabic simple" start="5">
+<li><p>De retour à la fenêtre <strong>Charger un ensemble de données de productivité terrain personnalisé</strong>, cliquez sur <strong>OK</strong> dans le coin inférieur droit pour traiter les données.</p></li>
+<li><p>Si les valeurs du fichier d’entrée ne correspondent pas exactement aux exigences décrites ci-dessus, vous verrez un message d’avertissement. Dans de nombreux cas, l’avertissement est déclenché par la définition de NoData, mais l’outil essaie toujours de l’importer. Pour cette raison, il est <strong>extrêmement important</strong> pour vous d’explorer la couche de sortie pour vous assurer que les résultats sont mappés comme prévu.</p></li>
+</ol>
+<img alt="../_images/warning.png" class="align-center" src="../_images/warning.png" />
+<ol class="arabic simple" start="7">
+<li><p>Une fois que vous avez cliqué sur <strong>OK</strong> dans la fenêtre d’avertissement, une barre de progression apparaît indiquant le pourcentage de la tâche terminée.</p></li>
+</ol>
+<img alt="../_images/processing.png" class="align-center" src="../_images/processing.png" />
+<ol class="arabic simple" start="8">
+<li><p>Lorsque le traitement est terminé, l’ensemble de données de productivité terrestre importé est chargé dans QGIS.</p></li>
+</ol>
+<img alt="../_images/lpd_output_loaded.png" class="align-center" src="../_images/lpd_output_loaded.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reportez-vous au tutoriel <a class="reference internal" href="tutorial_compute_sdg_indicator.html#tut-compute-sdg"><span class="std std-ref">Calculer l’indicateur SDG</span></a> pour obtenir des instructions sur l’utilisation du LPD importé pour calculer l’ODD final 15.3.1 après intégration avec la couverture terrestre et le carbone organique du sol.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial_custom_landcover.html" class="btn btn-neutral float-right" title="Utiliser des données de couverture terrestre personnalisées" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial_task_download.html" class="btn btn-neutral" title="Statut de la tâche et téléchargement" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

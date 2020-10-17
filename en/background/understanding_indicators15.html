@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SDG Indicator 15.3.1 &mdash; LDMS 1.0.3 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="LDMS 1.0.3 documentation" href="../index.html"/>
+        <link rel="next" title="Before installing the toolbox" href="before_installing.html"/>
+        <link rel="prev" title="Dataset coding" href="../about/layers.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/general_info.html">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/data_sources.html">Data sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/layers.html">Dataset coding</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Background information</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SDG Indicator 15.3.1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sub-indicators">Sub-indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#productivity">Productivity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#productivity-trajectory">Productivity Trajectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#productivity-state">Productivity State</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#productivity-performance">Productivity Performance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#combining-productivity-indicators">Combining Productivity Indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#soil-organic-carbon">Soil organic carbon</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#combining-indicators">Combining indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="before_installing.html">Before installing the toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Registration and settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculate indicators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Plot data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Download data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Visualization tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Load data tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>SDG Indicator 15.3.1</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sdg-indicator-15-3-1">
+<span id="indicator-15-3-1"></span><h1>SDG Indicator 15.3.1<a class="headerlink" href="#sdg-indicator-15-3-1" title="Permalink to this headline">¶</a></h1>
+<p>As part of the “2030 Agenda for Sustainable Development”, Sustainable
+Development Goal (SDG) 15 is to:</p>
+<blockquote>
+<div><p>“Protect, restore and promote sustainable use of terrestrial ecosystems,
+sustainably manage forests, combat desertification, and halt and reverse
+land degradation and halt biodiversity loss”</p>
+</div></blockquote>
+<p>Each SDG has specific targets addressing different components, in this case, of
+life on land. Target 15.3 aims to:</p>
+<blockquote>
+<div><p>“By 2030, combat desertification, restore degraded land and soil, including
+land affected by desertification, drought and floods, and strive to achieve
+a land degradation-neutral world”</p>
+</div></blockquote>
+<p>Indicators will be used then to assess the progress of each SDG target. In the
+case of SDG 15.3 the progress towards a land degradation neutral world will be
+assessed using indicator 15.3.1:</p>
+<blockquote>
+<div><p>“proportion of land that is degraded over total land area”</p>
+</div></blockquote>
+<p>As the custodian agency for SDG 15.3, the United Nations Convention to Combat
+Desertification (UNCCD) has developed a <a class="reference external" href="http://www2.unccd.int/sites/default/files/relevant-links/2017-10/Good%20Practice%20Guidance_SDG%20Indicator%2015.3.1_Version%201.0.pdf">Good Practice Guidance (GPG)</a>.
+providing recommendations on how to calculate SDG Indicator 15.3.1.</p>
+<p>This document provides a brief introduction to SDG Indicator 15.3.1 and
+describes how each indicator is calculated by LDMS.</p>
+<p>In order to assess the area degraded, SDG Indicator 15.3.1 uses information
+from 3 sub-indicators:</p>
+<ol class="arabic simple">
+<li><p>Vegetation productivity</p></li>
+<li><p>Land cover</p></li>
+<li><p>Soil organic carbon</p></li>
+</ol>
+<img alt="../_images/indicator_15_3_1.png" class="align-center" src="../_images/indicator_15_3_1.png" />
+<p>LDMS allows the user to compute each of these subindicators in a
+spatially explicit way generating raster maps which are then integrated into a
+final SDG 15.3.1 indicator map and produces a table result reporting areas
+potentially improved and degraded for the area of analysis.</p>
+<div class="section" id="sub-indicators">
+<h2>Sub-indicators<a class="headerlink" href="#sub-indicators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="productivity">
+<span id="indicator-productivity"></span><h3>Productivity<a class="headerlink" href="#productivity" title="Permalink to this headline">¶</a></h3>
+<p>Land productivity is the biological productive capacity of the land, the source
+of all the food, fiber and fuel that sustains humans (United Nations
+Statistical Commission 2016). Net primary productivity (NPP) is the net amount
+of carbon assimilated after photosynthesis and autotrophic respiration over a
+given period of time (Clark et al. 2001) and is typically represented in units
+such as kg/ha/yr. NPP is a variable time consuming and costly to estimate, for
+that reason, we rely on remotely sensed information to derive indicators of
+NPP.</p>
+<p>One of the most commonly used surrogates of NPP is the Normalized Difference
+Vegetation Index (NDVI), computed using information from the red and near
+infrared portions of the electromagnetic spectrum. In LDMS we make
+use of bi-weekly products from MODIS and AVHRR to compute annual integrals of
+NDVI (computed as the mean annual NDVI for simplicity of interpretation of
+results). These annual integrals of NDVI are then used to compute each of the
+productivity indicators explained below.</p>
+<p>Land productivity is assessed in LDMS using three measures of change
+derived from NDVI time series data: trajectory, performance and state</p>
+<img alt="../_images/indicator_15_3_1_prod_subindicators.png" class="align-center" src="../_images/indicator_15_3_1_prod_subindicators.png" />
+<div class="section" id="productivity-trajectory">
+<span id="indicator-productivity-trajectory"></span><h4>Productivity Trajectory<a class="headerlink" href="#productivity-trajectory" title="Permalink to this headline">¶</a></h4>
+<p>Trajectory measures the rate of change in primary productivity over time. As
+indicated in the figure below, LDMS computes a linear regression at
+the pixel level to identify areas experiencing changes in primary productivity
+for the period under analysis. A Mann-Kendall non-paremetric significance test
+is then applied, considering only significant changes those that show a p-value
+≤ 0.05. Positive significant trends in NDVI would indicate potential
+improvement in land condition, and negative significant trends potential
+degradation.</p>
+<img alt="../_images/lp_traj_flow.PNG" class="align-center" src="../_images/lp_traj_flow.PNG" />
+<div class="section" id="correcting-for-the-effects-of-climate">
+<span id="indicator-productivity-climate-correction"></span><h5>Correcting for the effects of climate<a class="headerlink" href="#correcting-for-the-effects-of-climate" title="Permalink to this headline">¶</a></h5>
+<p>Within a given ecosystem, primary productivity is affected by several factors,
+such as temperature, and the availability of light, nutrients and water. Of
+those, water availability is the most variable over time, and can have very
+significant influences in the amount of plant tissue produced every year. When
+annual integrals of NDVI are used to perform the trajectory analysis, it is
+important to interpret the results having historical precipitation information
+as a context. Otherwise, declining productivity trends could be identified as
+human caused land degradation, when they are driven by regional patterns of
+changes in water availability.</p>
+<p>LDMS allows the user to perform different types of analysis to
+separate the climatic causes of the changes in primary productivity, from those
+which could be a consequence of human land use decisions on the ground. The
+methods currently supported for climate corrections are:</p>
+<p><strong>Residual Trend Analysis (RESTREND):</strong> RESTREND uses linear regression models
+to predict NDVI for a given rainfall amount. Trends in the difference between
+the predicted NDVI and the observed NDVI (the residual) are interpreted as
+non-climatically related productivity change. Please refer to the following
+citation more more details on the method and its limitations: <cite>Wessels, K.J.;
+van den Bergh, F.; Scholes, R.J. Limits to detectability of land degradation by
+trend analysis of vegetation index data. Remote Sens. Environ. 2012, 125,
+10–22.</cite></p>
+<p><strong>Rain Use Efficiency (RUE):</strong> RUE Is the ratio of annual NPP to annual
+precipitation. LDMS uses the annual integrals of NDVI as a proxy for
+annual NPP, and offers the possibility of choosing among different
+precipitation products to compute RUE. After RUE is computed for each of the
+years under analysis, a linear regression and a non-parametric significance
+test is applied to the trend of RUE over time. Positive significant trends in
+RUE would indicate potential improvement in land condition, and negative
+significant trends potential degradation. Please refer to the following
+publication for details on the methods and its limitations: <cite>Wessels, K.J.;
+Prince, S.D.; Malherbe, J.; Small, J.; Frost, P.E.; VanZyl, D. Can
+human-induced land degradation be distinguished from the effects of rainfall
+variability? A case study in South Africa. J. Arid Environ. 2007, 68, 271–297.</cite></p>
+<p><strong>Water Use Efficiency (WUE):</strong> RUE assumes that there is a linear relationship
+between the amount of water that falls in the form of precipitation in a
+particular place and the amount of water which will be actually used by the
+plants. This assumption does not hold true for every system. WUE tries to
+address this limitation by using total annual evapo-transpiration (ET) instead
+precipitation. ET is defined as precipitation minus the water lost to surface
+runoff, recharge to groundwater and changes to soil water storage. The rest of
+the analysis follows as described for RUE: a linear regression and a
+non-parametric significance test is applied to the trend of WUE over time.
+Positive significant trends in WUE would indicate potential improvement in land
+condition, and negative significant trends potential degradation.</p>
+<p>The table below list the datasets available in LDMS to perform NDVI
+trend analysis over time using the original NDVI data or with climatic
+corrections:</p>
+<img alt="../_images/lp_traj_variables.PNG" class="align-center" src="../_images/lp_traj_variables.PNG" />
+</div>
+</div>
+<div class="section" id="productivity-state">
+<span id="indicator-productivity-state"></span><h4>Productivity State<a class="headerlink" href="#productivity-state" title="Permalink to this headline">¶</a></h4>
+<p>The Productivity State indicator allows for the detection of recent changes in
+primary productivity as compared to a baseline period. The indicator is
+computed as follows:</p>
+<ol class="arabic simple">
+<li><p>Define the baseline period (historical period to which to compare recent
+primary productivity).</p></li>
+<li><p>Define the comparison period (recent years used to compute comparison). It
+is recommended to use a 3-year to avoid annual fluctuations related to
+climate.</p></li>
+<li><p>For each pixel, use the annual integrals of NDVI for the baseline period to
+compute a frequency distribution. In case the baseline period missed some
+extreme values in NDVI, add 5% on both extremes of the distribution. That
+expanded frequency distribution curve is then used to define the cut-off
+values of the 10 percentile classes.</p></li>
+<li><p>Compute the mean NDVI for the baseline period, and determine the percentile
+class it belongs to. Assign to the mean NDVI for the baseline period the
+number corresponding to that percentile class. Possible values range from 1
+(lowest class) to 10 (highest class).</p></li>
+<li><p>Compute the mean NDVI for the comparison period, and determine the
+percentile class it belongs to. Assign to the mean NDVI for the comparison
+period the number corresponding to that percentile class. Possible values
+range from 1 (lowest class) to 10 (highest class).</p></li>
+<li><p>Determine the difference in class number between the comparison and the
+baseline period (comparison minus baseline).</p></li>
+<li><p>If the difference in class between the baseline and the comparison period is
+≤ 2, then that pixel could potentially be degraded. If the difference is ≥
+2, that pixel would indicate a recent improvement in terms of primary
+productivity. Pixels with small changes are considered stable.</p></li>
+</ol>
+<img alt="../_images/lp_state_flow.PNG" class="align-center" src="../_images/lp_state_flow.PNG" />
+<p>The table below list the datasets available in LDMS to compute the
+Productivity State indicator:</p>
+<img alt="../_images/lp_state_variables.PNG" class="align-center" src="../_images/lp_state_variables.PNG" />
+</div>
+<div class="section" id="productivity-performance">
+<span id="indicator-productivity-performance"></span><h4>Productivity Performance<a class="headerlink" href="#productivity-performance" title="Permalink to this headline">¶</a></h4>
+<p>The Productivity Performance indicator measures local productivity relative to
+other similar vegetation types in similar land cover types or bioclimatic
+regions throughout the study area. LDMS uses the unique combination
+of soil units (soil taxonomy units using USDA system provided by SoilGrids at
+250m resolution) and land cover (full 37 land cover classes provided by ESA CCI
+at 300m resolution) to define this areas of analysis. The indicator is computed
+as follows:</p>
+<ol class="arabic simple">
+<li><p>Define the analysis period, and use the time series of NDVI to compute mean
+the NDVI for each pixel.</p></li>
+<li><p>Define similar ecologically similar units as the unique intersection of land
+cover and soil type.</p></li>
+<li><p>For each unit, extract all the mean NDVI values computed in step 1, and
+create a frequency distribution. From this distribution determine the value
+which represents the 90th   percentile (we don’t recommend using the
+absolute maximum NDVI value to avoid possible errors due to the presence of
+outliers). The value representing the 90th percentile will be considered the
+maximum productivity for that unit.</p></li>
+<li><p>Compute the ratio of mean NDVI and maximum productivity (in each case
+compare the mean observed value to the maximum for its corresponding unit).</p></li>
+<li><p>If observed mean NDVI is lower than 50% than the maximum productivity, that
+pixel is considered potentially degraded for this indicator.</p></li>
+</ol>
+<img alt="../_images/lp_perf_flow.PNG" class="align-center" src="../_images/lp_perf_flow.PNG" />
+<p>The table below list the datasets available in LDMS to compute the
+Productivity Performance indicator:</p>
+<img alt="../_images/lp_perf_variables.PNG" class="align-center" src="../_images/lp_perf_variables.PNG" />
+</div>
+<div class="section" id="combining-productivity-indicators">
+<span id="indicator-15-3-1-combining-indicators"></span><h4>Combining Productivity Indicators<a class="headerlink" href="#combining-productivity-indicators" title="Permalink to this headline">¶</a></h4>
+<p>The three productivity sub-indicators are then combined as indicated in the
+tables below. For SDG 15.3.1 reporting, the 3-class indicator is required, but
+LDMS also produces a 5-class one which takes advantage of the
+information provided by State to inform the type of degradation occurring in
+the area.</p>
+<img alt="../_images/lp_aggregation.PNG" class="align-center" src="../_images/lp_aggregation.PNG" />
+</div>
+</div>
+<div class="section" id="land-cover">
+<span id="indicator-land-cover"></span><h3>Land cover<a class="headerlink" href="#land-cover" title="Permalink to this headline">¶</a></h3>
+<p>To assess changes in land cover users need land cover maps covering the study
+area for the baseline and target years. These maps need to be of acceptable
+accuracy and created in such a way which allows for valid comparisons.
+LDMS uses ESA CCI land cover maps as the default dataset, but local
+maps can also be used. The indicator is computed as follows:</p>
+<ol class="arabic simple">
+<li><p>Reclassify both land cover maps to the 7 land cover classes needed for
+reporting to the UNCCD (forest, grassland, cropland, wetland, artificial
+area, bare land and water).</p></li>
+<li><p>Perform a land cover transition analysis to identify which pixels remained
+in the same land cover class, and which ones changed.</p></li>
+<li><p>Based on your local knowledge of the conditions in the study area and the
+land degradation processed occurring there, use the table below to identify
+which transitions correspond to degradation (- sign), improvement (+ sign),
+or no change in terms of land condition (zero).</p></li>
+</ol>
+<img alt="../_images/lc_matrix.PNG" class="align-center" src="../_images/lc_matrix.PNG" />
+<ol class="arabic simple">
+<li><p>LDMS will combine the information from the land cover maps and the
+table of degradation typologies by land cover transition to compute the land
+cover sub-indicator.</p></li>
+</ol>
+<img alt="../_images/lc_flow.PNG" class="align-center" src="../_images/lc_flow.PNG" />
+</div>
+<div class="section" id="soil-organic-carbon">
+<span id="indicator-soc"></span><h3>Soil organic carbon<a class="headerlink" href="#soil-organic-carbon" title="Permalink to this headline">¶</a></h3>
+<p>The third sub-indicator for monitoring land degradation as part of the SDG
+process quantifies changes in soil organic carbon (SOC) over the reporting
+period. Changes in SOC are particularly difficult to assess for several
+reasons, some of them being the high spatial variability of soil properties,
+the time and cost intensiveness of conducting representative soil surveys and
+the lack of time series data on SOC for most regions of the world. To address
+some of the limitations, a combined land cover/SOC method is used in
+LDMS to estimate changes in SOC and identify potentially degraded
+areas. The indicator is computed as follows:</p>
+<ol class="arabic simple">
+<li><p>Determine the SOC reference values. LDMS uses SoilGrids 250m
+carbon stocks for the first 30 cm of the soil profile as the reference
+values for calculation (NOTE: SoilGrids uses information from a variety of
+data sources and ranging from many years to produce this product, therefore
+assigning a date for calculations purposes could cause inaccuracies in the
+stock change calculations).</p></li>
+<li><p>Reclassify the land cover maps to the 7 land cover classes needed for
+reporting to the UNCCD (forest, grassland, cropland, wetland, artificial
+area, bare land and water). Ideally annual land cover maps are preferred,
+but at least land cover maps for the starting and end years are needed.</p></li>
+<li><p>To estimate the changes in C stocks for the reporting period C conversion
+coefficients for changes in land use, management and inputs are recommended
+by the IPCC and the UNCCD. However, spatially explicit information on
+management and C inputs is not available for most regions. As such, only
+land use conversion coefficient can be applied for estimating changes in C
+stocks (using land cover as a proxy for land use). The coefficients used
+were the result of a literature review performed by the UNCCD and are
+presented in the table below. Those coefficients represent the proportional
+in C stocks after 20 years of land cover change.</p></li>
+</ol>
+<img alt="../_images/soc_coeff.PNG" class="align-center" src="../_images/soc_coeff.PNG" />
+<p>Changes in SOC are better studied for land cover transitions involving
+agriculture, and for that reason there is a different set of coefficients for
+each of the main global climatic regions: Temperate Dry (f = 0.80), Temperate
+Moist (f = 0.69), Tropical Dry (f = 0.58), Tropical Moist (f = 0.48), and
+Tropical Montane (f = 0.64).</p>
+<ol class="arabic simple" start="4">
+<li><p>Compute relative different in SOC between the baseline and the target
+period, areas which experienced a loss in SOC of 10% of more during the
+reporting period will be considered potentially degraded, and areas
+experiencing a gain of 10% or more as potentially improved.</p></li>
+</ol>
+<img alt="../_images/soc.PNG" class="align-center" src="../_images/soc.PNG" />
+</div>
+</div>
+<div class="section" id="combining-indicators">
+<h2>Combining indicators<a class="headerlink" href="#combining-indicators" title="Permalink to this headline">¶</a></h2>
+<p>The integration of the three SDG 15.3.1 sub-indicators is done following the
+one-out all-out rule, this means that if an area was identified as potentially
+degraded by any of the sub-indicators, then that area will be considered
+potentially degraded for reporting purposes.</p>
+<img alt="../_images/sdg_aggregation.PNG" class="align-center" src="../_images/sdg_aggregation.PNG" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="before_installing.html" class="btn btn-neutral float-right" title="Before installing the toolbox" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../about/layers.html" class="btn btn-neutral" title="Dataset coding" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

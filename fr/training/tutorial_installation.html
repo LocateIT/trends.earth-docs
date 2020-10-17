@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation et enregistrement &mdash; Documentation LDMS 1.0.3</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation LDMS 1.0.3" href="../index.html"/>
+        <link rel="next" title="Exécuter des sous-indicateurs en une étape" href="tutorial_run_all_subindicators.html"/>
+        <link rel="prev" title="À propos" href="../documentation/info.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">À propos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/general_info.html">informations générales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/data_sources.html">Sources de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/publications.html">Des publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/faq.html">Questions fréquemment posées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/development.html">Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/layers.html">Codage de l'ensemble de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/changelog.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contexte</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">Indicateur ODD 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Avant d’installer l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installation de l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/report_overviews.html">Autres ressources</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Enregistrement et paramètres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculer les indicateurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Tracer les données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Téléchargement des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">Voir et télécharger les résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Outils de visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Charger l’outil de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">À propos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Guides étape par étape</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation et enregistrement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_run_all_subindicators.html">Exécuter des sous-indicateurs en une étape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_task_download.html">Statut de la tâche et téléchargement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_lpd.html">Utiliser des données de productivité personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_landcover.html">Utiliser des données de couverture terrestre personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_custom_soc.html">Utiliser des données de sol personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_load_basemap.html">Charger les résultats et le fond de carte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_compute_sdg_indicator.html">Calculer l’indicateur SDG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_summary_table.html">Interpréter le tableau récapitulatif</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_forest_carbon.html">Outil de changement de forêt et de carbone</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Vidéos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="video_links.html">Présentation des vidéos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Installation et enregistrement</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-and-registration">
+<h1>Installation et enregistrement<a class="headerlink" href="#installation-and-registration" title="Lien permanent vers ce titre">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Objectif</strong>: Apprenez à installer, enregistrer et vous connecter pour utiliser le plugin Trends.Earth dans QGIS. Ces étapes doivent être complétées seulement la première fois que vous utilisez l’outil. Votre utilisateur sera ensuite enregistré pour les sessions futures.</p></li>
+<li><p><strong>Temps estimé d’achèvement</strong>: 20 minutes</p></li>
+<li><p><strong>Accès Internet</strong>: Obligatoire</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="../pdfs/Trends.Earth_Tutorial01_Installation.pdf">Télécharger cette page en format PDF pour une utilisation hors connexion</a></p>
+</div>
+<ol class="arabic simple">
+<li><p>Une fois QGIS installé, ouvrez-le en cherchant dans l’icône QGIS du bureau ou du menu du programme de votre ordinateur.</p></li>
+<li><p>Une fois QGIS chargé, recherchez dans la barre de menu <strong>Plugins</strong>. Cliquez et un menu déroulant s’ouvrira.</p></li>
+<li><p>Cliquez sur <strong>Gérer et installer les plugins</strong>. La fenêtre Plugins s’ouvre.</p></li>
+</ol>
+<img alt="../_images/qgis.png" class="align-center" src="../_images/qgis.png" />
+<ol class="arabic simple" start="4">
+<li><p>Dans la fenêtre de recherche, tapez <strong>Trends.Earth</strong>.</p></li>
+<li><p>Cliquez sur l’icône du plugin Trends.Earth dans la fenêtre du milieu et les informations sur la boîte à outils s’afficheront dans le panneau de droite.</p></li>
+</ol>
+<img alt="../_images/search_plugin.png" class="align-center" src="../_images/search_plugin.png" />
+<ol class="arabic simple" start="6">
+<li><p>Pour installer le plugin, cliquez sur le bouton <strong>Install plugin</strong> situé dans la partie inférieure droite de la fenêtre. Une petite fenêtre apparaîtra montrant la barre de progression pour le téléchargement et l’installation du plugin Trends.Earth. Ce processus peut prendre quelques minutes en fonction de la vitesse de la connexion Internet et de l’ordinateur que vous utilisez.</p></li>
+</ol>
+<img alt="../_images/installing.png" class="align-center" src="../_images/installing.png" />
+<ol class="arabic simple" start="7">
+<li><p>Une fois que la fenêtre avec la barre de progression disparaît, cliquez sur <strong>Fermer</strong> pour fermer la fenêtre Plugin. Trends.Earth sera installé sur votre ordinateur. Il affichera dans votre barre d’outils QGIS la série d’icônes mise en évidence ci-dessous.</p></li>
+</ol>
+<img alt="../_images/installed.png" class="align-center" src="../_images/installed.png" />
+<ol class="arabic simple" start="8">
+<li><p>Pour créer votre compte, cliquez sur l’icône de la clé anglaise (<a class="reference internal" href="../_images/icon-wrench.png"><img alt="iconWrench" src="../_images/icon-wrench.png" style="width: 2em;" /></a>).</p></li>
+</ol>
+<img alt="../_images/ldmt_toolbar_highlight_settings.png" class="align-center" src="../_images/ldmt_toolbar_highlight_settings.png" />
+<ol class="arabic simple" start="9">
+<li><p>Pour vous inscrire, cliquez sur le bouton <strong>Étape 1: Enregistrer</strong>.</p></li>
+</ol>
+<img alt="../_images/settings.png" class="align-center" src="../_images/settings.png" />
+<ol class="arabic simple" start="10">
+<li><p>Entrez votre email, votre nom, votre organisation et votre pays de résidence.</p></li>
+</ol>
+<img alt="../_images/registration.png" class="align-center" src="../_images/registration.png" />
+<ol class="arabic simple" start="11">
+<li><p>Sélectionnez <strong>Ok</strong> et vous verrez un message indiquant que votre utilisateur a été enregistré.</p></li>
+</ol>
+<img alt="../_images/registration_success.png" class="align-center" src="../_images/registration_success.png" />
+<p>12. After registering, you will receive an email from <a class="reference external" href="mailto:api&#37;&#52;&#48;trends&#46;earth">api<span>&#64;</span>trends<span>&#46;</span>earth</a> with your
+password. If you don’t see the email in your inbox after 15-20 seconds, please check your spam folder in case the email was sent there. Once you receive this email , click on <strong>Step 2: Enter login</strong>. This will bring up a dialog asking for your email and password. Enter your email address and the password you received from <a class="reference external" href="mailto:api&#37;&#52;&#48;trends&#46;earth">api<span>&#64;</span>trends<span>&#46;</span>earth</a> and click <strong>Ok</strong>.</p>
+<img alt="../_images/login.png" class="align-center" src="../_images/login.png" />
+<ol class="arabic simple" start="13">
+<li><p>Vous verrez un message indiquant que vous avez été connecté:</p></li>
+</ol>
+<img alt="../_images/login_success.png" class="align-center" src="../_images/login_success.png" />
+<p>Vous êtes maintenant prêt à utiliser Trends.Earth!</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial_run_all_subindicators.html" class="btn btn-neutral float-right" title="Exécuter des sous-indicateurs en une étape" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../documentation/info.html" class="btn btn-neutral" title="À propos" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>

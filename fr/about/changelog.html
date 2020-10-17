@@ -1,0 +1,596 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Changelog &mdash; Documentation LDMS 1.0.3</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/trends_earth_logo_square_32x32.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation LDMS 1.0.3" href="../index.html"/>
+        <link rel="next" title="Indicateur ODD 15.3.1" href="../background/understanding_indicators15.html"/>
+        <link rel="prev" title="Codage de l&#39;ensemble de données" href="layers.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LDMS
+          
+
+          
+            
+            <img src="../_static/trends_earth_logo_square_32x32.ico" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">À propos</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="general_info.html">informations générales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_sources.html">Sources de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Des publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Questions fréquemment posées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Développement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layers.html">Codage de l'ensemble de données</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">`0,66 (20 juillet 2019) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.66&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">`0,64 (9 juillet 2019) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.64&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">`0,62 (27 janvier 2019) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.62&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">`0,60 (3 décembre 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.60&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">`0,58 (11 août 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.58&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">`0.56.5 (21 mai 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.5&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">`0.56.4 (21 mai 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.4&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">`0.56.3 (21 avril 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.3&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">`0.56.2 (10 avril 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.2&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">`0.56.1 (10 avril 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.1&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">`0,56 (9 avril 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.56&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">`0,54 (8 avril 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.54&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">`0.52.1 (21 mars 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.52.1&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">`0.52.1 (21 mars 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.52.1&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">`0,52 (19 mars 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.52&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">`0,50 (15 mars 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.50&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">`0,48 (13 mars 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.48&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id24">`0,46 (13 mars 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.46&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id25">`0,44 (12 mars 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.44&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">`0,42 (4 février 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.42&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id28">`0.40 (4 février 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.40&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">`0,38 (16 janvier 2018) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.38&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id30">`0,36 (14 décembre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.36&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id32">`0,34 (14 décembre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.34&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id34">`0,32 (14 décembre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.32&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id35">`0,30 (12 décembre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.30&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id36">`0.24 (6 décembre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.24&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id37">`0.22 (4 décembre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.22&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id38">`0.18 (2 décembre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.18&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id39">`0.16 (6 novembre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.16&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id40">`0.14 (25 octobre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.14&gt; `_</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id41">`0.12 (6 octobre 2017) &lt;https://github.com/ConservationInternational/trends.earth/releases/tag/0.12&gt; `_</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Contexte</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../background/understanding_indicators15.html">Indicateur ODD 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/before_installing.html">Avant d’installer l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/installing.html">Installation de l’outil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../background/report_overviews.html">Autres ressources</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/settings.html">Enregistrement et paramètres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/calculate.html">Calculer les indicateurs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/plot_data.html">Tracer les données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/data_download.html">Téléchargement des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/gee_tasks.html">Voir et télécharger les résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/reporting_tool.html">Outils de visualisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/load_data.html">Charger l’outil de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/info.html">À propos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Guides étape par étape</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_installation.html">Installation et enregistrement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_run_all_subindicators.html">Exécuter des sous-indicateurs en une étape</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_task_download.html">Statut de la tâche et téléchargement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_custom_lpd.html">Utiliser des données de productivité personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_custom_landcover.html">Utiliser des données de couverture terrestre personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_custom_soc.html">Utiliser des données de sol personnalisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_load_basemap.html">Charger les résultats et le fond de carte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_compute_sdg_indicator.html">Calculer l’indicateur SDG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_summary_table.html">Interpréter le tableau récapitulatif</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/tutorial_forest_carbon.html">Outil de changement de forêt et de carbone</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Vidéos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../training/video_links.html">Présentation des vidéos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LDMS</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Changelog</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Cette page répertorie l'historique des versions de | trends.earth <a href="#id1"><span class="problematic" id="id2">|</span></a>.</p>
+<div class="section" id="id2">
+<h2><a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/1.0.2">1.0.2</a><a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Première version de QGIS3 - de nombreux correctifs pour la mise à niveau vers Qt5 et QGIS3 API.</p></li>
+<li><p>Mettez à niveau toutes les dépendances du plugin vers les dernières versions à partir de janvier 2020.</p></li>
+<li><p>Correction de l'outil de téléchargement de données pour avoir des 1styles par défaut pour tous les jeux de données disponibles.</p></li>
+<li><p>Commencez à passer aux frameworks QgsProcessing et QgsTask - actuellement, seul l'outil carbone est migré, mais tous les outils seront migrés avant la version 1.0./</p></li>
+<li><p>Formatage de nettoyage de la feuille de calcul de sortie de l'outil carbone pour rendre la signification de chaque colonne plus claire.</p></li>
+<li><p>Mettez à jour tous les scripts GEE pour utiliser la dernière version de l'API GEE (0.1.213).</p></li>
+<li><p>Enregistrez plus de paramètres choisis dans les boîtes de dialogue d'outils entre les sessions QGIS.</p></li>
+<li><p>Nettoyez le code de mise en mémoire tampon pour utiliser les projections Lambert Equal Area centrées sur les centroïdes de polygones pour la mise en mémoire tampon.</p></li>
+<li><p>Déplacez la documentation dans le dossier docs à la racine du référentiel trends.earth.</p></li>
+<li><p>Ajoutez plus de détails sur la façon de documenter comment contribuer au développement de Trends.Earth,</p></li>
+<li><p>Nettoyez le référentiel en supprimant les fichiers de traductions compilés et en ajoutant ces types de fichiers à .gitignore.</p></li>
+<li><p>Remplacez le nom du projet transifex par «tendances».</p></li>
+<li><p>Diverses corrections de bugs et compatibilité.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,66 (20 juillet 2019) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.66">https://github.com/ConservationInternational/trends.earth/releases/tag/0.66</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Limitez la superficie maximale des tâches à 10 000 000 km2, sauf pour les tâches en zone urbaine, qui est limitée à 10 000 km2.</p></li>
+<li><p>Ajoutez une section d'arrière-plan sur SDG 11.3.1 et mettez à jour le didacticiel SDG 11.3.1.</p></li>
+<li><p>Mettre à jour le code ODD 11.3.1 pour inclure 1998 dans la série (en interne pendant le calcul) afin de filtrer le bruit depuis le début de la série urbaine.</p></li>
+<li><p>Correction des restrictions de date dans l'outil tout-en-un SDG 15.3.1 pour tenir compte à la fois de la disponibilité ESA et MODIS.</p></li>
+<li><p>Ajoutez une section pour en savoir plus sur l'installation des versions de Github.</p></li>
+<li><p>Mettez à jour et révisez les traductions espagnoles, mettez à jour les traductions de google pour d'autres langues.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,64 (9 juillet 2019) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.64">https://github.com/ConservationInternational/trends.earth/releases/tag/0.64</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Correction de la manipulation des nodates dans l'outil de carbone total.</p></li>
+<li><p>Ajoutez la prise en charge des données Hansen 2018 dans l'outil de carbone total.</p></li>
+<li><p>Ajout de la prise en charge des données mondiales sur la biomasse de 30 m de Wood's Hole en carbone total</p></li>
+<li><p>Définir l'année finale maximale pour une étape de l'outil ODD 15.3.1 en 2015 (correspondant aux données de l'ESA).</p></li>
+<li><p>Faites de la productivité de Trends.Earth le jeu de données par défaut dans SDG, un outil en une étape pour 15.3.1.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,62 (27 janvier 2019) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.62">https://github.com/ConservationInternational/trends.earth/releases/tag/0.62</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ajouter un outil expérimental pour cartographier les rendements potentiels en carbone des interventions alternatives de restauration.</p></li>
+<li><p>Ajoutez les données MODIS 2018.</p></li>
+<li><p>Divers correctifs au dimensionnement des fenêtres pour les fenêtres GUI.</p></li>
+<li><p>Mise à niveau vers le dernier openpyxl - corrige le chargement du logo Trends.Earth dans les tableaux récapitulatifs.</p></li>
+<li><p>Ajouter une liste de publications pour aider les documents.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,60 (3 décembre 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.60">https://github.com/ConservationInternational/trends.earth/releases/tag/0.60</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id6" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ajouter le calcul de l'évolution de la zone urbaine et du taux de croissance de la population (ODD 11.3.1)</p></li>
+<li><p>Fixer les hauteurs par défaut des boutons / champs de saisie Ajouter une sélection de ville pour AOI</p></li>
+<li><p>Ajouter une mise en mémoire tampon facultative d'AOI</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id7">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,58 (11 août 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.58">https://github.com/ConservationInternational/trends.earth/releases/tag/0.58</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id7" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ajouter une section de test à la page des calculs</p></li>
+<li><p>Ajouter une version de test du carbone total (au-dessus et en dessous du sol) et des émissions dues à la déforestation</p></li>
+<li><p>Corrections de bugs mineurs, y compris pour les polygones non valides dans les AOI d'entrée</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.56.5 (21 mai 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.5">https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.5</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id8" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Correction d'une erreur avec l'importation LPD demandant une année de données.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.56.4 (21 mai 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.4">https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.4</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id10" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Rééchantillonnez toujours les données importées à la résolution la plus élevée.</p></li>
+<li><p>Correction des zones climatiques d'importation SOC personnalisées pour utiliser un ensemble de données de zones climatiques étendu afin d'éliminer aucune donnée.</p></li>
+<li><p>Mettez à jour le MOD16A2 avec les dernières données.</p></li>
+<li><p>Forcer la saisie de la date lors de l'importation des données SOC et LC</p></li>
+<li><p>Ajoutez les sorties Trends.Earth globales à l'outil de téléchargement.</p></li>
+<li><p>Correction de la gestion des valeurs NULL dans les légendes.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id11">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.56.3 (21 avril 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.3">https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.3</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id11" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Correction du calcul des tableaux récapitulatifs pour les AOI qui sont répartis sur le 180e méridien (Fidji, Russie, etc.).</p></li>
+<li><p>Modifier le calcul de l'état pour que les zones avec de très petits changements de magnitude dans l'intégrale NDVI (&amp;lt;0,01 unités NDVI sur toute la période) soient considérées comme stables.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id12">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.56.2 (10 avril 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.2">https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.2</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id12" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Corrections mineures d'Unicode.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id14">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.56.1 (10 avril 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.1">https://github.com/ConservationInternational/trends.earth/releases/tag/0.56.1</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id14" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Correction d'une erreur de guimauve lors du chargement du plugin</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id15">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,56 (9 avril 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.56">https://github.com/ConservationInternational/trends.earth/releases/tag/0.56</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id15" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Correction d'un problème de rastérisation des données (rasters vides en sortie)</p></li>
+<li><p>Forcer l'utilisateur à choisir la résolution de sortie s'il pixellise un vecteur</p></li>
+<li><p>Prise en charge du calcul de la dégradation du SOC à partir des données SOC et LC personnalisées</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id16">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,54 (8 avril 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.54">https://github.com/ConservationInternational/trends.earth/releases/tag/0.54</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id16" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Prise en charge du chargement de données LPD, SOC et LC personnalisées.</p></li>
+<li><p>Styles de nettoyage pour qu'ils correspondent à maps.trends.earth</p></li>
+<li><p>Mettre à niveau pyopenxl</p></li>
+<li><p>Ajouter des icônes d'importation / chargement à toutes les zones de sélection de calque</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id17">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.52.1 (21 mars 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.52.1">https://github.com/ConservationInternational/trends.earth/releases/tag/0.52.1</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id17" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Corrections de bugs mineurs lors de l'atelier d'Antalya.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id19">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.52.1 (21 mars 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.52.1">https://github.com/ConservationInternational/trends.earth/releases/tag/0.52.1</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id19" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Corrections de bugs mineurs lors de l'atelier d'Antalya.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id20">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,52 (19 mars 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.52">https://github.com/ConservationInternational/trends.earth/releases/tag/0.52</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id20" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Nettoyer le code de traitement AOI.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id21">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,50 (15 mars 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.50">https://github.com/ConservationInternational/trends.earth/releases/tag/0.50</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id21" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Passez l'exception si elle est uniquement liée à l'ajout du logo Trends.Earth dans le fichier Excel.</p></li>
+<li><p>Diverses corrections de bugs mineurs.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id22">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,48 (13 mars 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.48">https://github.com/ConservationInternational/trends.earth/releases/tag/0.48</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id22" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Correction du formatage du tableau</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id24">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,46 (13 mars 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.46">https://github.com/ConservationInternational/trends.earth/releases/tag/0.46</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id24" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Prise en charge du calcul du tableau de rapports avec plusieurs géométries (Fidji, Russie)</p></li>
+<li><p>Ajouter des tables LPD et LC à l'onglet de feuille de calcul UNCCD</p></li>
+<li><p>Nettoyer le message d'avertissement dans l'outil d'importation LPD</p></li>
+<li><p>Correction du chargement final de la couche de productivité combinée TE</p></li>
+<li><p>Correction des tâches de téléchargement (toujours pas de styles)</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id25">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,44 (12 mars 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.44">https://github.com/ConservationInternational/trends.earth/releases/tag/0.44</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id25" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ajouter JRC LPD</p></li>
+<li><p>Ajouter un outil pour télécharger des données personnalisées sur la couverture terrestre</p></li>
+<li><p>Ajouter un outil pour télécharger des données de productivité personnalisées</p></li>
+<li><p>Ajouter une note que le téléchargement SOC personnalisé arrive bientôt</p></li>
+<li><p>Ajouter un outil pour ajouter des fonds de carte à l'aide de données Natural Earth</p></li>
+<li><p>Ajouter un outil tout-en-un pour calculer les trois sous-indicateurs à la fois</p></li>
+<li><p>Renommer la classe &amp;quot;Terres nues&amp;quot; en &amp;quot;Autres terres&amp;quot; pour cohérence avec l'UNCCD</p></li>
+<li><p>Mettre à jour les documents</p></li>
+<li><p>Mise à niveau vers marshmallow 3.0.0b7</p></li>
+<li><p>Déplacez le code GEE dans le référentiel trends.earth principal</p></li>
+<li><p>Améliorez la gestion des AOI, en particulier lorsque des fichiers de formes sont utilisés pour la saisie</p></li>
+<li><p>Gérer les sorties multi-fichiers de GEE en les tuilant en VRT</p></li>
+<li><p>Prise en charge du traitement des données pour les pays qui franchissent le 180e méridien</p></li>
+<li><p>Améliorer la mise en forme du tableau récapitulatif</p></li>
+<li><p>Désormais, les versions des scripts GEE seront mises en correspondance avec la version du plugin</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id26">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,42 (4 février 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.42">https://github.com/ConservationInternational/trends.earth/releases/tag/0.42</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id26" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Correction d'un crash lors du changement d'agrégation LC (due setEnabled sur l'étiquette supprimée)</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id28">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.40 (4 février 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.40">https://github.com/ConservationInternational/trends.earth/releases/tag/0.40</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id28" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Supprimer l'utilisation du mode pour l'indicateur de couverture terrestre.</p></li>
+<li><p>Combinez le tableau récapitulatif et les outils de création de cartes d'indicateurs ODD.</p></li>
+<li><p>Ajoutez un talon pour savoir où le produit JRC LPD sera disponible.</p></li>
+<li><p>Enregistrez le sous-indicateur de productivité dans la bande 2 dans le fichier d'indicateur SDG.</p></li>
+<li><p>Bump le script GEE vers v0.3.</p></li>
+<li><p>Correction d'une erreur due à la division par zéro lors de la génération du tableau récapitulatif lorsqu'une classe a une zone nulle.</p></li>
+<li><p>Par défaut MODIS pour les calculs de productivité.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id29">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,38 (16 janvier 2018) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.38">https://github.com/ConservationInternational/trends.earth/releases/tag/0.38</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id29" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ajouter le calcul annuel du carbone organique du sol</p></li>
+<li><p>Nettoyer le code de traitement AOI, autoriser plusieurs polygones d'entrée dans les AOI du fichier de formes</p></li>
+<li><p>Ajouter un ombrage au côté des éléments du tableau d'agrégation de la couverture terrestre</p></li>
+<li><p>Correction du problème firstShow sur la table d'agrégation</p></li>
+<li><p>Réviser les résultats du tableau récapitulatif pour fournir de plus amples informations sur chacun des trois indicateurs</p></li>
+<li><p>Ajoutez des jeux de données supplémentaires aux performances, à l'état, à la couverture terrestre et à la production de carbone organique du sol.</p></li>
+<li><p>Mettre à jour aucune valeur de données et de masquage pour être systématiquement -32768 (aucune donnée) et -32767 (données masquées)</p></li>
+<li><p>Autoriser la dénomination des téléchargements de fichiers</p></li>
+<li><p>Ajouter une icône au menu de la barre d'outils, corriger le nom du plugin.</p></li>
+<li><p>Refactoriser le code de style de la couche pour extraire les informations de bande de la sortie GEE.</p></li>
+<li><p>Ajoutez un outil pour charger les ensembles de données trends.earth existants dans QGIS.</p></li>
+<li><p>Fixer les limites de date de couverture terrestre - ne pas autoriser la sélection de dates invalides à partir des données de l'ICC.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id30">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,36 (14 décembre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.36">https://github.com/ConservationInternational/trends.earth/releases/tag/0.36</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id30" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Correction d'un problème avec showEvent sur l'outil de création de rapports cartographiques.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id32">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,34 (14 décembre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.34">https://github.com/ConservationInternational/trends.earth/releases/tag/0.34</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id32" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="id34">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,32 (14 décembre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.32">https://github.com/ConservationInternational/trends.earth/releases/tag/0.32</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id34" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="id35">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0,30 (12 décembre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.30">https://github.com/ConservationInternational/trends.earth/releases/tag/0.30</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id35" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="id36">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.24 (6 décembre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.24">https://github.com/ConservationInternational/trends.earth/releases/tag/0.24</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id36" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="id37">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.22 (4 décembre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.22">https://github.com/ConservationInternational/trends.earth/releases/tag/0.22</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id37" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="id38">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.18 (2 décembre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.18">https://github.com/ConservationInternational/trends.earth/releases/tag/0.18</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id38" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="id39">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.16 (6 novembre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.16">https://github.com/ConservationInternational/trends.earth/releases/tag/0.16</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id39" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="id40">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.14 (25 octobre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.14">https://github.com/ConservationInternational/trends.earth/releases/tag/0.14</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id40" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="id41">
+<h2><a href="#id1"><span class="problematic" id="id2">`</span></a>0.12 (6 octobre 2017) &lt;<a class="reference external" href="https://github.com/ConservationInternational/trends.earth/releases/tag/0.12">https://github.com/ConservationInternational/trends.earth/releases/tag/0.12</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_<a class="headerlink" href="#id41" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../background/understanding_indicators15.html" class="btn btn-neutral float-right" title="Indicateur ODD 15.3.1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layers.html" class="btn btn-neutral" title="Codage de l&#39;ensemble de données" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+
+    </p>
+  </div>
+  &copy; 2015 HPED LP | <a href="http://www8.hp.com/us/en/hpe/legal/terms-of-use.html">Terms of Use</a> | <a href="https://www.hpe.com/us/en/legal/privacy.html">Privacy</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78129924-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-78129924-3');
+</script>
+
+
+</body>
+</html>
